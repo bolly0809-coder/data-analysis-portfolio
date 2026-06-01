@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="420" viewBox="0 0 820 420">
+<style>text{font-family:Arial, sans-serif;font-size:14px}.title{font-size:20px;font-weight:700}.label{font-size:13px}.value{font-size:13px;font-weight:600}</style>
+<text class="title" x="410.0" y="32" text-anchor="middle">플랫폼별 리뷰 수 중앙값</text>
+<text class="label" x="168" y="83.4" text-anchor="end">쿠팡</text>
+<rect x="180" y="60" width="351.1" height="36" rx="4" fill="#777"/>
+<text class="value" x="539.1" y="83.4">7,828개</text>
+<text class="label" x="168" y="143.4" text-anchor="end">네이버쇼핑</text>
+<rect x="180" y="120" width="570.0" height="36" rx="4" fill="#777"/>
+<text class="value" x="758.0" y="143.4">12,707개</text>
+<line x1="180" y1="375" x2="750" y2="375" stroke="#ccc"/>
+</svg>
