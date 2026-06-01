@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="500" viewBox="0 0 820 500">
+<style>text{font-family:Arial, sans-serif;font-size:14px}.title{font-size:20px;font-weight:700}.label{font-size:13px}.value{font-size:13px;font-weight:600}</style>
+<text class="title" x="410.0" y="32" text-anchor="middle">랭킹 기준별 상품 구성 겹침 비교</text>
+<text class="label" x="158" y="83.4" text-anchor="end">쿠팡랭킹순 vs 판매량순 - 겹침</text>
+<rect x="170" y="60" width="214.3" height="36" rx="4" fill="#777"/>
+<text class="value" x="392.3" y="83.4">52개</text>
+<text class="label" x="158" y="143.4" text-anchor="end">많이구매한BEST_일간 vs 많이구매한BEST_주간 - 겹침</text>
+<rect x="170" y="120" width="309.1" height="36" rx="4" fill="#777"/>
+<text class="value" x="487.1" y="143.4">75개</text>
+<text class="label" x="158" y="203.4" text-anchor="end">쿠팡랭킹순 vs 판매량순 - 합집합</text>
+<rect x="170" y="180" width="610.0" height="36" rx="4" fill="#777"/>
+<text class="value" x="788.0" y="203.4">148개</text>
+<text class="label" x="158" y="263.4" text-anchor="end">많이구매한BEST_일간 vs 많이구매한BEST_주간 - 합집합</text>
+<rect x="170" y="240" width="490.5" height="36" rx="4" fill="#777"/>
+<text class="value" x="668.5" y="263.4">119개</text>
+<line x1="170" y1="455" x2="780" y2="455" stroke="#ccc"/>
+</svg>
