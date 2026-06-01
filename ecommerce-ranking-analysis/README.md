@@ -17,6 +17,7 @@
 - 리뷰 수와 평점으로 본 사용자 반응 신호
 - 랭킹 기준별 상품 구성 안정성
 - 상품명에 반복되는 성분·기능·타겟·제형 중심 소구 키워드
+- 플랫폼별 상품명 소구 키워드 차이
 - 광고/커머스 성과 분석 관점에서의 해석 가능성
 
 ---
@@ -60,6 +61,7 @@
 5. **Keyword Analysis**
    - 건강식품 상품명 소구 키워드 사전 작성
    - 성분, 기능, 타겟, 제형 중심 키워드 빈도 분석
+   - 플랫폼별 상품명 소구 키워드 비교
 
 6. **Insight Summary**
    - 광고/커머스 분석 관점에서 해석 가능한 핵심 인사이트 도출
@@ -102,6 +104,13 @@
 
 상품명은 검색 결과 화면에서 사용자가 가장 먼저 접하는 정보이므로, 광고/커머스 관점에서는 클릭 전 구매 판단을 자극하는 소구 요소로 볼 수 있습니다.
 
+### Insight 6. 플랫폼별로 상품명 소구 키워드 구성이 다르게 나타났습니다.
+
+- 쿠팡: `캡슐/정`, `비타민`, `오메가3`, `마그네슘` 등 성분·제형 중심 키워드가 상대적으로 강함
+- 네이버쇼핑: `홍삼`, `분말/스틱`, `루테인`, `어린이` 등 프리미엄·섭취 형태·타겟 중심 키워드가 상대적으로 두드러짐
+
+이는 같은 건강식품 카테고리라도 플랫폼별 랭킹 상품 구성과 사용자 구매 맥락에 따라 상품명, 광고 소재, 상세페이지 소구 포인트를 다르게 설계해야 함을 시사합니다.
+
 ---
 
 ## 5. Visualizations
@@ -122,6 +131,10 @@
 
 ![상품명 소구 키워드 TOP20](./images/keyword_top20.svg)
 
+### 플랫폼별 상품명 소구 키워드 비교 TOP15
+
+![플랫폼별 상품명 소구 키워드 비교](./images/keyword_comparison_by_platform.svg)
+
 ### 랭킹 기준별 상품 구성 겹침 비교
 
 ![랭킹 기준별 상품 구성 겹침 비교](./images/ranking_overlap_comparison.svg)
@@ -137,12 +150,14 @@ ecommerce-ranking-analysis/
 │   ├── step5_platform_unique_summary.csv
 │   ├── step5_overlap_summary.csv
 │   ├── step6_keyword_overall.csv
+│   ├── keyword_platform_comparison_top15.csv
 │   └── step8_insight_cards.csv
 ├── images/
 │   ├── price_distribution_by_platform.svg
 │   ├── review_distribution_by_platform.svg
 │   ├── price_vs_review_scatter.svg
 │   ├── keyword_top20.svg
+│   ├── keyword_comparison_by_platform.svg
 │   └── ranking_overlap_comparison.svg
 └── scripts/
     ├── step2_preprocess_ecommerce.py
@@ -185,6 +200,7 @@ ecommerce-ranking-analysis/
 - 플랫폼별 데이터 구조 차이 정리
 - 가격·리뷰 수·평점 전처리
 - 상품명 키워드 기반 구매 소구 포인트 분석
+- 플랫폼별 상품명 소구 방식 비교
 - 랭킹 기준별 상품 구성 차이 해석
 - 분석 결과를 광고/커머스 인사이트로 연결
 
