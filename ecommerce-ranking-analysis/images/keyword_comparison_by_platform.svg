@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="620" viewBox="0 0 900 620">
+<style>text{font-family:Arial, sans-serif;font-size:13px}.title{font-size:20px;font-weight:700}.axis{font-size:12px}.label{font-size:12px}.legend{font-size:13px}</style>
+<text class="title" x="450" y="32" text-anchor="middle">Platform Keyword Comparison TOP15</text>
+<text class="legend" x="650" y="60">■ Coupang</text>
+<text class="legend" x="750" y="60">■ Naver Shopping</text>
+<line x1="180" y1="570" x2="840" y2="570" stroke="#333"/>
+<line x1="180" y1="70" x2="180" y2="570" stroke="#333"/>
+<text class="axis" x="510" y="605" text-anchor="middle">Mention Count</text>
+<text class="label" x="170" y="92" text-anchor="end">vitamin</text><rect x="180" y="76" width="306.6" height="10" fill="#777"/><rect x="180" y="90" width="293.4" height="10" fill="#aaa"/>
+<text class="label" x="170" y="124" text-anchor="end">capsule/tablet</text><rect x="180" y="108" width="409.2" height="10" fill="#777"/><rect x="180" y="122" width="118.8" height="10" fill="#aaa"/>
+<text class="label" x="170" y="156" text-anchor="end">probiotics</text><rect x="180" y="140" width="122.1" height="10" fill="#777"/><rect x="180" y="154" width="118.8" height="10" fill="#aaa"/>
+<text class="label" x="170" y="188" text-anchor="end">omega3</text><rect x="180" y="172" width="95.7" height="10" fill="#777"/><rect x="180" y="186" width="62.7" height="10" fill="#aaa"/>
+<text class="label" x="170" y="220" text-anchor="end">powder/stick</text><rect x="180" y="204" width="52.8" height="10" fill="#777"/><rect x="180" y="218" width="95.7" height="10" fill="#aaa"/>
+<text class="label" x="170" y="252" text-anchor="end">red ginseng</text><rect x="180" y="236" width="13.2" height="10" fill="#777"/><rect x="180" y="250" width="66.0" height="10" fill="#aaa"/>
+<text class="label" x="170" y="284" text-anchor="end">premium</text><rect x="180" y="268" width="42.9" height="10" fill="#777"/><rect x="180" y="282" width="33.0" height="10" fill="#aaa"/>
+<text class="label" x="170" y="316" text-anchor="end">lutein</text><rect x="180" y="300" width="29.7" height="10" fill="#777"/><rect x="180" y="314" width="42.9" height="10" fill="#aaa"/>
+<text class="label" x="170" y="348" text-anchor="end">kids</text><rect x="180" y="332" width="23.1" height="10" fill="#777"/><rect x="180" y="346" width="36.3" height="10" fill="#aaa"/>
+<text class="label" x="170" y="380" text-anchor="end">women</text><rect x="180" y="364" width="26.4" height="10" fill="#777"/><rect x="180" y="378" width="29.7" height="10" fill="#aaa"/>
+<text class="label" x="170" y="412" text-anchor="end">magnesium</text><rect x="180" y="396" width="39.6" height="10" fill="#777"/><rect x="180" y="410" width="16.5" height="10" fill="#aaa"/>
+<text class="label" x="170" y="444" text-anchor="end">coenzyme</text><rect x="180" y="428" width="26.4" height="10" fill="#777"/><rect x="180" y="442" width="16.5" height="10" fill="#aaa"/>
+<text class="label" x="170" y="476" text-anchor="end">diet</text><rect x="180" y="460" width="23.1" height="10" fill="#777"/><rect x="180" y="474" width="16.5" height="10" fill="#aaa"/>
+<text class="label" x="170" y="508" text-anchor="end">calcium</text><rect x="180" y="492" width="16.5" height="10" fill="#777"/><rect x="180" y="506" width="13.2" height="10" fill="#aaa"/>
+<text class="label" x="170" y="540" text-anchor="end">zinc</text><rect x="180" y="524" width="23.1" height="10" fill="#777"/><rect x="180" y="538" width="6.6" height="10" fill="#aaa"/>
+<text class="axis" x="180" y="586" text-anchor="middle">0</text><text class="axis" x="345" y="586" text-anchor="middle">50</text><text class="axis" x="510" y="586" text-anchor="middle">100</text><text class="axis" x="675" y="586" text-anchor="middle">150</text>
+</svg>
