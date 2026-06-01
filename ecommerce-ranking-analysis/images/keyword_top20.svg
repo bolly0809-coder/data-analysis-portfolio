@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="1310" viewBox="0 0 760 1310">
+<style>text{font-family:Arial, sans-serif;font-size:14px}.title{font-size:20px;font-weight:700}.label{font-size:13px}.value{font-size:13px;font-weight:600}</style>
+<text class="title" x="380.0" y="32" text-anchor="middle">상품명 소구 키워드 TOP20</text>
+<text class="label" x="158" y="83.4" text-anchor="end">비타민</text>
+<rect x="170" y="60" width="550.0" height="36" rx="4" fill="#777"/>
+<text class="value" x="728.0" y="83.4">182회</text>
+<text class="label" x="158" y="143.4" text-anchor="end">캡슐/정</text>
+<rect x="170" y="120" width="483.5" height="36" rx="4" fill="#777"/>
+<text class="value" x="661.5" y="143.4">160회</text>
+<text class="label" x="158" y="203.4" text-anchor="end">유산균</text>
+<rect x="170" y="180" width="220.6" height="36" rx="4" fill="#777"/>
+<text class="value" x="398.6" y="203.4">73회</text>
+<text class="label" x="158" y="263.4" text-anchor="end">오메가3</text>
+<rect x="170" y="240" width="145.1" height="36" rx="4" fill="#777"/>
+<text class="value" x="323.1" y="263.4">48회</text>
+<text class="label" x="158" y="323.4" text-anchor="end">분말/스틱</text>
+<rect x="170" y="300" width="136.0" height="36" rx="4" fill="#777"/>
+<text class="value" x="314.0" y="323.4">45회</text>
+<text class="label" x="158" y="383.4" text-anchor="end">홍삼</text>
+<rect x="170" y="360" width="72.5" height="36" rx="4" fill="#777"/>
+<text class="value" x="250.5" y="383.4">24회</text>
+<text class="label" x="158" y="443.4" text-anchor="end">프리미엄</text>
+<rect x="170" y="420" width="69.5" height="36" rx="4" fill="#777"/>
+<text class="value" x="247.5" y="443.4">23회</text>
+<text class="label" x="158" y="503.4" text-anchor="end">루테인</text>
+<rect x="170" y="480" width="66.5" height="36" rx="4" fill="#777"/>
+<text class="value" x="244.5" y="503.4">22회</text>
+<text class="label" x="158" y="563.4" text-anchor="end">어린이</text>
+<rect x="170" y="540" width="54.4" height="36" rx="4" fill="#777"/>
+<text class="value" x="232.4" y="563.4">18회</text>
+<text class="label" x="158" y="623.4" text-anchor="end">마그네슘</text>
+<rect x="170" y="600" width="51.4" height="36" rx="4" fill="#777"/>
+<text class="value" x="229.4" y="623.4">17회</text>
+<text class="label" x="158" y="683.4" text-anchor="end">여성</text>
+<rect x="170" y="660" width="51.4" height="36" rx="4" fill="#777"/>
+<text class="value" x="229.4" y="683.4">17회</text>
+<text class="label" x="158" y="743.4" text-anchor="end">코엔자임</text>
+<rect x="170" y="720" width="39.3" height="36" rx="4" fill="#777"/>
+<text class="value" x="217.3" y="743.4">13회</text>
+<text class="label" x="158" y="803.4" text-anchor="end">다이어트</text>
+<rect x="170" y="780" width="36.3" height="36" rx="4" fill="#777"/>
+<text class="value" x="214.3" y="803.4">12회</text>
+<text class="label" x="158" y="863.4" text-anchor="end">칼슘</text>
+<rect x="170" y="840" width="27.2" height="36" rx="4" fill="#777"/>
+<text class="value" x="205.2" y="863.4">9회</text>
+<text class="label" x="158" y="923.4" text-anchor="end">아연</text>
+<rect x="170" y="900" width="27.2" height="36" rx="4" fill="#777"/>
+<text class="value" x="205.2" y="923.4">9회</text>
+<text class="label" x="158" y="983.4" text-anchor="end">국내/인증</text>
+<rect x="170" y="960" width="24.2" height="36" rx="4" fill="#777"/>
+<text class="value" x="202.2" y="983.4">8회</text>
+<text class="label" x="158" y="1043.4" text-anchor="end">관절</text>
+<rect x="170" y="1020" width="24.2" height="36" rx="4" fill="#777"/>
+<text class="value" x="202.2" y="1043.4">8회</text>
+<text class="label" x="158" y="1103.4" text-anchor="end">효소</text>
+<rect x="170" y="1080" width="24.2" height="36" rx="4" fill="#777"/>
+<text class="value" x="202.2" y="1103.4">8회</text>
+<text class="label" x="158" y="1163.4" text-anchor="end">선물/세트</text>
+<rect x="170" y="1140" width="24.2" height="36" rx="4" fill="#777"/>
+<text class="value" x="202.2" y="1163.4">8회</text>
+<text class="label" x="158" y="1223.4" text-anchor="end">밀크씨슬</text>
+<rect x="170" y="1200" width="21.2" height="36" rx="4" fill="#777"/>
+<text class="value" x="199.2" y="1223.4">7회</text>
+<line x1="170" y1="1265" x2="720" y2="1265" stroke="#ccc"/>
+</svg>
