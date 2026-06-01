@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="420" viewBox="0 0 760 420">
+<style>text{font-family:Arial, sans-serif;font-size:14px}.title{font-size:20px;font-weight:700}.label{font-size:13px}.value{font-size:13px;font-weight:600}</style>
+<text class="title" x="380.0" y="32" text-anchor="middle">플랫폼별 가격 중앙값</text>
+<text class="label" x="158" y="83.4" text-anchor="end">쿠팡</text>
+<rect x="170" y="60" width="92.6" height="36" rx="4" fill="#777"/>
+<text class="value" x="270.58982511923687" y="83.4">15,380원</text>
+<text class="label" x="158" y="143.4" text-anchor="end">네이버쇼핑</text>
+<rect x="170" y="120" width="379.9" height="36" rx="4" fill="#777"/>
+<text class="value" x="557.935" y="143.4">62,900원</text>
+<line x1="170" y1="375" x2="720" y2="375" stroke="#ccc"/>
+</svg>
