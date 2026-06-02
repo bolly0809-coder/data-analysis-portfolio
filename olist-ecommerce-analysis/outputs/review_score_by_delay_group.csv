@@ -1,0 +1,6 @@
+delay_group_order,delay_group,order_count,avg_delay_days,avg_review_score,low_score_rate_pct,five_star_rate_pct
+1,early_7plus_days,70929,-15.16,4.32,8.94,63.58
+2,early_1_to_6_days,17234,-4.16,4.2,10.21,57.43
+4,delayed_1_to_3_days,2636,1.4,3.77,19.08,43.13
+5,delayed_4_to_7_days,1773,5.11,2.32,61.25,18.1
+6,delayed_8plus_days,3252,18.33,1.73,78.32,7.47
