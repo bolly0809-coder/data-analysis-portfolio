@@ -1,0 +1,6 @@
+delay_group,avg_review_score,low_score_rate_pct,five_star_rate_pct
+early_7plus_days,4.32,8.94,63.58
+early_1_to_6_days,4.20,10.21,57.43
+delayed_1_to_3_days,3.77,19.08,43.13
+delayed_4_to_7_days,2.32,61.25,18.10
+delayed_8plus_days,1.73,78.32,7.47
