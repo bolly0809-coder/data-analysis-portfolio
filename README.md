@@ -61,6 +61,22 @@
 
 ---
 
+### 4. Olist Ecommerce Analysis
+
+Olist 공개 이커머스 주문·결제·배송·리뷰 데이터를 SQLite에 적재하고, SQL 기반으로 월별 KPI, 카테고리별 매출 기여도, 고객 지역별 배송 지연율, 배송 지연 구간별 리뷰 점수 차이를 분석한 미니 프로젝트입니다.
+
+**보여주는 역량**
+
+- SQLite 기반 다중 테이블 JOIN, GROUP BY, CTE, Window Function 활용
+- 주문 단위와 상품 단위 base table 분리
+- 결제·리뷰 중복 집계 방지를 위한 사전 집계 처리
+- 배송 지연율과 리뷰 점수의 관계를 고객 경험 관점에서 해석
+- 클릭·장바구니 로그가 없는 거래 데이터의 한계를 명시하고 분석 범위 제한
+
+- Repository: [`olist-ecommerce-analysis`](./olist-ecommerce-analysis)
+
+---
+
 ## Repository Structure
 
 ```text
@@ -70,11 +86,18 @@
 │   └── README.md
 ├── seoul-isolation-risk-analysis/
 │   └── README.md
-└── ecommerce-ranking-analysis/
+├── ecommerce-ranking-analysis/
+│   ├── README.md
+│   ├── data/
+│   ├── images/
+│   └── scripts/
+└── olist-ecommerce-analysis/
     ├── README.md
     ├── data/
     ├── images/
-    └── scripts/
+    ├── notebooks/
+    ├── outputs/
+    └── sql/
 ```
 
 ---
