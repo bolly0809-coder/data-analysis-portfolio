@@ -46,11 +46,11 @@ Olist 데이터셋은 클릭, 장바구니, 페이지뷰와 같은 웹 행동 �
 원본 9개 CSV를 SQLite DB에 적재한 뒤, 분석 목적에 맞게 주문 단위와 상품 단위 base table을 분리했습니다.
 
 ```text
-customers → orders → order_items → products
-orders → order_payments
-orders → order_reviews
-order_items → sellers
-products → product_category_name_translation
+customers -> orders -> order_items -> products
+orders -> order_payments
+orders -> order_reviews
+order_items -> sellers
+products -> product_category_name_translation
 ```
 
 | 테이블명 | 분석 단위 | 용도 |
@@ -73,95 +73,35 @@ products → product_category_name_translation
 
 ---
 
-## 5. 주요 SQL 분석
+## 5. 주요 결과
 
-### 5-1. 월별 주문 수·매출·객단가 분석
+### 5-1. 월별 주문 수와 매출 추이
 
-```sql
-SELECT
-    purchase_month,
-    COUNT(DISTINCT order_id) AS order_count,
-    COUNT(DISTINCT customer_unique_id) AS customer_count,
-    ROUND(SUM(payment_value), 2) AS revenue,
-    ROUND(SUM(payment_value) / COUNT(DISTINCT order_id), 2) AS avg_order_value,
-    ROUND(AVG(delivery_days), 2) AS avg_delivery_days,
-    ROUND(AVG(is_delayed) * 100, 2) AS delayed_order_rate_pct,
-    ROUND(AVG(review_score), 2) AS avg_review_score
-FROM order_base_delivered
-GROUP BY purchase_month
-ORDER BY purchase_month;
-```
-
-### 5-2. Window Function 기반 카테고리별 매출 비중 분석
-
-```sql
-WITH category_sales AS (
-    SELECT
-        product_category,
-        COUNT(DISTINCT order_id) AS order_count,
-        COUNT(*) AS item_count,
-        SUM(price) AS revenue
-    FROM order_item_base_delivered
-    GROUP BY product_category
-),
-category_share AS (
-    SELECT
-        product_category,
-        order_count,
-        item_count,
-        revenue,
-        revenue / SUM(revenue) OVER() AS revenue_share,
-        SUM(revenue) OVER(
-            ORDER BY revenue DESC
-            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-        ) / SUM(revenue) OVER() AS cumulative_revenue_share,
-        RANK() OVER(ORDER BY revenue DESC) AS revenue_rank
-    FROM category_sales
-)
-SELECT
-    revenue_rank,
-    product_category,
-    order_count,
-    item_count,
-    ROUND(revenue, 2) AS revenue,
-    ROUND(revenue_share * 100, 2) AS revenue_share_pct,
-    ROUND(cumulative_revenue_share * 100, 2) AS cumulative_revenue_share_pct
-FROM category_share
-ORDER BY revenue_rank
-LIMIT 20;
-```
-
----
-
-## 6. 주요 결과
-
-### 6-1. 월별 주문 수와 매출 추이
-
-![월별 주문 수와 매출 추이](images/01_monthly_orders_revenue.svg)
+![월별 주문 수와 매출 추이](images/01_monthly_orders_revenue.png)
 
 그래프의 매출 축은 백만 단위로 표시했습니다. 2017년 이후 주문 수와 매출이 함께 증가했으며, 2017년 11월 이후 높은 수준의 주문량과 매출을 유지했습니다.
 
-### 6-2. 카테고리별 상품 매출 TOP10
+### 5-2. 카테고리별 상품 매출 TOP10
 
-![카테고리별 상품 매출 TOP10](images/02_top_categories_revenue.svg)
+![카테고리별 상품 매출 TOP10](images/02_top_categories_revenue.png)
 
 상품 매출 기준 상위 카테고리는 `health_beauty`, `watches_gifts`, `bed_bath_table`, `sports_leisure`, `computers_accessories` 순으로 나타났습니다. 그래프의 상품 매출 값은 백만 단위로 표시했습니다.
 
-### 6-3. 카테고리별 매출 비중 TOP20
+### 5-3. 카테고리별 매출 비중 TOP20
 
-![카테고리별 매출 비중 TOP20](images/03_category_revenue_share_top20.svg)
+![카테고리별 매출 비중 TOP20](images/03_category_revenue_share_top20.png)
 
 TOP20 카테고리가 전체 상품 매출의 약 84.06%를 차지해, 매출 기여도가 일부 주요 카테고리에 집중되어 있음을 확인했습니다.
 
-### 6-4. 고객 주별 배송 지연율 TOP10
+### 5-4. 고객 주별 배송 지연율 TOP10
 
-![고객 주별 배송 지연율 TOP10](images/04_delay_rate_by_state.svg)
+![고객 주별 배송 지연율 TOP10](images/04_delay_rate_by_state.png)
 
 고객 주별 배송 지연율을 비교한 결과, AL, MA, PI, CE, SE 등의 주에서 배송 지연율이 높게 확인되었습니다. 다만 지역별 지연율 차이는 판매자 위치, 물류 거리, 상품 구성, 주문량 차이의 영향을 함께 받을 수 있으므로 운영 점검 후보로 해석했습니다.
 
-### 6-5. 배송 지연 구간별 평균 리뷰 점수
+### 5-5. 배송 지연 구간별 평균 리뷰 점수
 
-![배송 지연 구간별 평균 리뷰 점수](images/05_review_score_by_delay_group.svg)
+![배송 지연 구간별 평균 리뷰 점수](images/05_review_score_by_delay_group.png)
 
 배송이 예상일보다 빨리 도착한 주문은 평균 리뷰 점수가 4점대였지만, 배송 지연이 길어질수록 평균 리뷰 점수가 낮아졌습니다.
 
@@ -173,15 +113,15 @@ TOP20 카테고리가 전체 상품 매출의 약 84.06%를 차지해, 매출 �
 | 4~7일 지연 | 2.32 |
 | 8일 이상 지연 | 1.73 |
 
-### 6-6. 배송 지연 구간별 낮은 점수 비율과 5점 비율
+### 5-6. 배송 지연 구간별 낮은 점수 비율과 5점 비율
 
-![배송 지연 구간별 낮은 점수 비율과 5점 비율](images/06_review_score_distribution_by_delay.svg)
+![배송 지연 구간별 낮은 점수 비율과 5점 비율](images/06_review_score_distribution_by_delay.png)
 
 배송이 빨리 도착한 주문에서는 5점 리뷰 비율이 높았지만, 배송 지연이 길어질수록 1~2점 리뷰 비율이 증가하고 5점 리뷰 비율은 감소했습니다.
 
 ---
 
-## 7. 핵심 인사이트
+## 6. 핵심 인사이트
 
 1. 2017년 이후 월별 주문 수와 매출은 유사한 흐름으로 증가했다.
 2. `health_beauty`, `watches_gifts`, `bed_bath_table` 등 상위 카테고리가 높은 매출 기여도를 보였고, TOP20 카테고리가 전체 상품 매출의 약 84.06%를 차지했다.
@@ -190,7 +130,7 @@ TOP20 카테고리가 전체 상품 매출의 약 84.06%를 차지해, 매출 �
 
 ---
 
-## 8. 한계 및 해석 주의점
+## 7. 한계 및 해석 주의점
 
 - 클릭, 장바구니, 페이지뷰, 노출, 이탈 데이터가 없어 퍼널 분석이나 전환율 분석은 수행할 수 없다.
 - 배송 지연과 리뷰 점수 간 관계를 확인했지만, 인과관계로 단정할 수는 없다.
@@ -201,7 +141,7 @@ TOP20 카테고리가 전체 상품 매출의 약 84.06%를 차지해, 매출 �
 
 ---
 
-## 9. 프로젝트에서 보여준 역량
+## 8. 프로젝트에서 보여준 역량
 
 - SQLite 기반 데이터 적재 및 SQL 분석 환경 구성
 - 다중 테이블 JOIN을 통한 분석용 base table 생성
@@ -215,35 +155,32 @@ TOP20 카테고리가 전체 상품 매출의 약 84.06%를 차지해, 매출 �
 
 ---
 
-## 10. 폴더 구조
+## 9. 폴더 구조
 
 ```text
 olist-ecommerce-analysis/
-├─ README.md
-├─ data/
-│  └─ README.md
-├─ notebooks/
-│  └─ README.md
-├─ outputs/
-│  ├─ monthly_kpi.csv
-│  ├─ category_revenue_top10.csv
-│  ├─ category_revenue_share.csv
-│  ├─ delivery_delay_by_state.csv
-│  └─ review_score_by_delay_group.csv
-├─ sql/
-│  ├─ 00_create_base_tables.sql
-│  ├─ 01_monthly_kpi.sql
-│  ├─ 02_category_revenue_top10.sql
-│  ├─ 03_category_revenue_share_window_function.sql
-│  ├─ 04_delivery_delay_by_state.sql
-│  └─ 05_review_score_by_delay_group.sql
-└─ images/
-   ├─ 01_monthly_orders_revenue.svg
-   ├─ 02_top_categories_revenue.svg
-   ├─ 03_category_revenue_share_top20.svg
-   ├─ 04_delay_rate_by_state.svg
-   ├─ 05_review_score_by_delay_group.svg
-   └─ 06_review_score_distribution_by_delay.svg
+README.md
+data/README.md
+notebooks/01_olist_data_load_and_sqlite_setup.ipynb
+notebooks/02_olist_sql_analysis_base_tables.ipynb
+notebooks/03_olist_visualization.ipynb
+outputs/monthly_kpi.csv
+outputs/category_revenue_top10.csv
+outputs/category_revenue_share.csv
+outputs/delivery_delay_by_state.csv
+outputs/review_score_by_delay_group.csv
+sql/00_create_base_tables.sql
+sql/01_monthly_kpi.sql
+sql/02_category_revenue_top10.sql
+sql/03_category_revenue_share_window_function.sql
+sql/04_delivery_delay_by_state.sql
+sql/05_review_score_by_delay_group.sql
+images/01_monthly_orders_revenue.png
+images/02_top_categories_revenue.png
+images/03_category_revenue_share_top20.png
+images/04_delay_rate_by_state.png
+images/05_review_score_by_delay_group.png
+images/06_review_score_distribution_by_delay.png
 ```
 
 > 원본 CSV와 SQLite DB 파일은 용량 및 데이터 출처 관리를 위해 GitHub에 포함하지 않습니다. 프로젝트를 재현하려면 Kaggle에서 원본 CSV를 다운로드한 뒤, 노트북을 순서대로 실행해 DB와 분석 결과물을 생성해야 합니다.
