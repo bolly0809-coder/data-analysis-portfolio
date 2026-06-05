@@ -1,0 +1,13 @@
+﻿table,grain_definition,key_column_for_check,row_count,unique_key_count,duplicate_key_count,is_key_unique
+orders,주문 1건,order_id,99441,99441,0,True
+customers,customer_id 1개,customer_id,99441,99441,0,True
+order_items,주문-상품 1행,order_id,112650,98666,13984,False
+order_payments,주문-결제수단 1행,order_id,103886,99440,4446,False
+order_reviews,리뷰 1행,order_id,99224,98673,551,False
+products,상품 1개,product_id,32951,32951,0,True
+sellers,판매자 1명,seller_id,3095,3095,0,True
+orders_enriched,주문 1건 + 배송 파생변수,order_id,99441,99441,0,True
+payment_by_order,주문 1건 기준 결제 사전 집계,order_id,99440,99440,0,True
+review_by_order,주문 1건 기준 리뷰 사전 집계,order_id,98673,98673,0,True
+order_base_delivered,배송 완료 주문 1건,order_id,96478,96478,0,True
+order_item_base_delivered,배송 완료 주문상품 1행,order_id,110197,96478,13719,False

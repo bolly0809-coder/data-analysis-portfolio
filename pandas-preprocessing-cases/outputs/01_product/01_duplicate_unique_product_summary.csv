@@ -1,0 +1,6 @@
+﻿metric,value,description
+ranking_view_rows,400,랭킹 기준 원본 분석용 행 수
+unique_product_rows,267,고유 상품 기준 행 수
+coupang_unique_products,148,쿠팡 고유 상품 수
+naver_unique_products,0,네이버쇼핑 고유 상품 수
+multiple_ranking_type_products,127,여러 랭킹 기준에 중복 등장한 고유 상품 수

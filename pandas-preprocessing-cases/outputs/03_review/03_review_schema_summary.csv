@@ -1,0 +1,4 @@
+﻿dataset,rows,columns,columns_list
+jobplanet_reviews,2100,14,"기업명, 전체평점, 복지/급여, 워라밸, 사내문화, 승진기회, 경영진, 기업추천율, CEO지지율, 성장가능성, 리뷰제목, 장점, 단점, 경영진에 바라는 점"
+review_long_format,8400,15,"review_id, company, text_type, context_signal, review_text, 전체평점, 복지/급여, 워라밸, 사내문화, 승진기회, 경영진, clean_text, review_length, is_short_text, standardized_text"
+category_mapping_result,8400,26,"review_id, company, text_type, context_signal, review_text, 전체평점, 복지/급여, 워라밸, 사내문화, 승진기회, 경영진, clean_text, review_length, is_short_text, standardized_text, matched_category_count, matched_categories, matched_keywords, has_category_match, cat_복지, cat_사내문화·동료, cat_성장가능성·커리어, cat_안정성·고용보장, cat_연봉, cat_워라밸·근무환경, cat_직무적합성"

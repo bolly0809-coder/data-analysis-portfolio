@@ -1,0 +1,6 @@
+﻿validation_area,check_item,result,status,interpretation
+review_text,long_format_conversion,"raw_review_rows=2100.0, text_segment_rows=8400.0",PASS,"리뷰제목, 장점, 단점, 경영진 의견을 long format으로 변환해 텍스트 유형별 분석이 가능해졌다."
+review_text,dictionary_loaded,category_dictionary_terms=596.0,PASS,실제 카테고리 사전을 불러와 리뷰 텍스트 매핑에 사용했다.
+review_text,category_match_rate,category_match_rate_percent=81.36,PASS,전체 텍스트 중 카테고리 1개 이상 매칭된 비율을 확인했다. 이 값은 사전 기반 방식의 커버리지로 해석한다.
+review_text,unmatched_review_sample,"unmatched_text_segment_count=1566.0, sample_rows=100",LIMITATION,미매칭 텍스트 샘플을 별도로 확인해 사전 기반 방식의 한계를 명시했다.
+review_text,company_signal_summary,company_summary_rows=12,PASS,리뷰 단위 카테고리 신호를 기업 단위 요약 테이블로 집계했다.

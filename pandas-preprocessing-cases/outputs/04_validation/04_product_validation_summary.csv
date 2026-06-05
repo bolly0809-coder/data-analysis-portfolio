@@ -1,0 +1,6 @@
+﻿validation_area,check_item,result,status,interpretation
+product_data,raw_to_cleaned_rows,"raw=400, cleaned=400",PASS,원본 통합 데이터와 기본 전처리 데이터의 행 수를 비교해 전처리 단계의 기준 행 수를 확인했다.
+product_data,ranking_view_and_unique_product_split,"ranking_view=400, unique_product=267",PASS,랭킹 화면 기준 분석과 고유 상품 기준 분석을 분리했다.
+product_data,ranking_rank_range,rank_min/max within 1~100: True,PASS,랭킹 기준별 순위 범위가 의도한 수집 범위와 맞는지 확인했다.
+product_data,ranking_missing_values,missing total=0,PASS,"가격, 리뷰 수, 평점 결측 여부를 랭킹 기준별로 점검했다."
+product_data,duplicate_product_management,duplicate_overall_count=261,PASS,중복 상품을 삭제만 한 것이 아니라 ranking_view와 unique_product 기준으로 분리해 관리했다.

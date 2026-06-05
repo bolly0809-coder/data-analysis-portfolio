@@ -1,0 +1,5 @@
+﻿scope,rows,rank_min,rank_max,unique_product_key,duplicate_key_rows,price_missing,review_count_zero,rating_zero
+coupang_rank,100,1,100,100,0,0,0,0
+coupang_sales,100,1,100,100,0,0,0,0
+naver_buy_daily,100,1,100,98,4,0,0,0
+naver_buy_weekly,100,1,100,96,8,0,0,0

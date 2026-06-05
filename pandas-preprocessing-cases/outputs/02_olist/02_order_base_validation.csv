@@ -1,0 +1,2 @@
+﻿row_count,unique_order_id,duplicate_order_id_count,unique_customer_id,unique_customer_unique_id,min_purchase_date,max_purchase_date,non_delivered_rows,missing_payment_value_rows,missing_review_score_rows,avg_delivery_days,avg_delay_days,delay_rate
+96478,96478,0,96478,93358,2016-09-15,2018-08-29,0,1,646,12.558217098051976,-11.17812572885353,0.08111693857667032

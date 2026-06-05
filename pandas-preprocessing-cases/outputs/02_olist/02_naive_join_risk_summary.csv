@@ -1,0 +1,2 @@
+﻿orders_rows,item_rows,payment_rows,review_rows,naive_join_rows,distinct_orders_after_join,sum_item_price_after_join,sum_payment_value_after_join,avg_review_score_after_join,original_item_price_sum,original_payment_value_sum,original_review_score_avg
+99441,112650,103886,99224,119143,99441,14273699.65,20579664.01,4.015582414978078,13591643.7,16008872.12,4.08642062404257

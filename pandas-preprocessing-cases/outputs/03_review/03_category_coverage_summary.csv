@@ -1,0 +1,11 @@
+﻿metric,value,description
+raw_review_rows,2100.0,원본 리뷰 행 수
+company_count,12.0,기업 수
+text_segment_rows,8400.0,title/pros/cons/to_management 분해 후 텍스트 행 수
+short_text_count,0.0,10자 미만 텍스트 수
+matched_text_segment_count,6834.0,카테고리 1개 이상 매칭 텍스트 수
+unmatched_text_segment_count,1566.0,카테고리 미매칭 텍스트 수
+category_match_rate_percent,81.36,카테고리 1개 이상 매칭 비율
+standard_dictionary_terms,194.0,표준화 사전 항목 수
+category_dictionary_terms,596.0,카테고리 사전 항목 수
+compound_noun_terms,267.0,복합명사 사전 항목 수
