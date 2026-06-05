@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local environments
+.env
+.venv/
+venv/
+
+# Large local databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Private/raw data
+data/private/
+private/
+*잡플래닛*.xlsx
+*jobplanet*.xlsx
+*raw*.xlsx
+
+# Model binaries
+*.pkl
+*.joblib
