@@ -1,0 +1,10 @@
+﻿check_type,category,count_value,pct_value
+order_status,delivered,96478,97.02
+order_status,shipped,1107,1.11
+order_status,canceled,625,0.63
+order_status,unavailable,609,0.61
+order_status,invoiced,314,0.32
+order_status,processing,301,0.3
+order_status,created,5,0.01
+order_status,approved,2,0.0
+review_missing,orders_without_review,768,0.77

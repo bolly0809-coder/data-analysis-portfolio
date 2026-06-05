@@ -1,0 +1,7 @@
+﻿delivery_group,order_count,avg_review_score,low_review_rate_pct,five_star_rate_pct
+early_7_days_or_more,70929,4.32,8.94,63.58
+early_1_to_6_days,10969,4.18,10.49,56.91
+on_time,6265,4.23,9.7,58.34
+delay_1_to_3_days,1356,3.51,25.52,36.21
+delay_4_to_7_days,1277,2.18,65.47,15.51
+delay_8_days_or_more,5036,2.41,58.68,20.23

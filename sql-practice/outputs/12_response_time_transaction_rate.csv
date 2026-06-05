@@ -1,0 +1,5 @@
+﻿response_time_group,quote_count,avg_response_minutes,transaction_count,transaction_rate_pct
+01_under_30m,43,9.33,15,34.88
+02_31_to_60m,32,45.47,19,59.38
+03_61_to_180m,105,109.55,36,34.29
+04_over_180m,10,212.5,5,50.0
