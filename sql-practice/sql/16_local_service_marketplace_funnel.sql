@@ -1,7 +1,17 @@
 -- 16_local_service_marketplace_funnel.sql
--- Purpose: 라이프서비스 중개 플랫폼의 핵심 퍼널 전환율 계산
--- Assumption: synthetic event log table `service_events`
--- Grain: one row per user event
+-- Case: Local Service Marketplace Product Analytics
+-- Business Question:
+--   In a local service marketplace, where do users drop off across the funnel?
+--   Visit -> Search -> Provider Detail View -> Request -> Quote Received -> Transaction -> Review.
+--
+-- Product Decision:
+--   Use the largest conversion drop to prioritize product questions around search quality,
+--   provider profile information, request form UX, quote receiving experience, and transaction conversion.
+--
+-- Data Assumption:
+--   synthetic event log table `service_events`
+--   Grain: one row per user event
+--   This query is for SQL structure practice, not actual company performance reporting.
 
 WITH user_funnel AS (
     SELECT
@@ -48,7 +58,8 @@ SELECT
 FROM funnel_with_prev
 ORDER BY step;
 
--- Interpretation guide:
--- 1. step_conversion_rate가 급락하는 구간은 제품 경험상 가장 큰 이탈 구간이다.
--- 2. request_created 전 이탈은 검색 결과 품질, 전문가 상세정보, 가격 기대치 문제일 수 있다.
--- 3. quote_received 이후 이탈은 견적 가격, 응답 속도, 전문가 신뢰정보, 리뷰 노출 문제일 수 있다.
+-- Interpretation Guide:
+-- 1. A low detail_view -> request_created rate may indicate issues in provider profile information, expected price, reviews, or request form UX.
+-- 2. A low request_created -> quote_received rate may indicate provider supply shortage, local matching issues, or low request quality.
+-- 3. A low quote_received -> transaction_completed rate may indicate price mismatch, weak quote quality, provider trust issues, or follow-up friction.
+-- 4. Funnel conversion is only the starting point; category, region, and acquisition channel segments should be checked before deciding product actions.
