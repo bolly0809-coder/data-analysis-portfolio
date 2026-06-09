@@ -1,0 +1,3 @@
+﻿group,review_count,avg_review_score,median_review_score,low_score_rate_1_2
+ad_complaint_reviews,896,2.5792410714285716,2.0,0.5535714285714286
+non_ad_complaint_reviews,8865,4.2148900169204735,5.0,0.16029328821206995

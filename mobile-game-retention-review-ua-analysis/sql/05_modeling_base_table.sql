@@ -1,0 +1,19 @@
+SELECT
+    date,
+    campaign_id,
+    channel,
+    country,
+    creative_type,
+    spend,
+    impressions,
+    clicks,
+    installs,
+    ctr,
+    cvr,
+    cpi,
+    tutorial_completion_rate,
+    d1_retention,
+    arpu_d1,
+    d1_revenue,
+    d7_roas
+FROM campaign_modeling_table;

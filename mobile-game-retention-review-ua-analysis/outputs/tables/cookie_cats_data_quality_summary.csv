@@ -1,0 +1,6 @@
+﻿column,dtype,missing_count,missing_rate,unique_count
+userid,int64,0,0.0,90189
+version,str,0,0.0,2
+sum_gamerounds,int64,0,0.0,942
+retention_1,bool,0,0.0,2
+retention_7,bool,0,0.0,2
