@@ -106,6 +106,22 @@ Olist 공개 이커머스 주문·결제·배송·리뷰 데이터를 SQLite에 
 
 ---
 
+### 6. Mobile Game Retention Review UA Analysis
+
+Cookie Cats A/B 테스트, Google Play 게임 리뷰 수집, 보조 캠페인 데이터를 활용해 모바일 게임의 리텐션, 유저 경험 신호, UA 성과 판단 구조를 분석한 미니 프로젝트입니다.
+
+**보여주는 역량**
+
+* A/B 테스트 기반 D1·D7 Retention 차이 검정
+* Google Play 게임 리뷰 수집 및 광고 불만·오류·반복성 등 리뷰 신호 분석
+* SQL 기반 CTR, CVR, CPI, D7 ROAS 산출
+* Campaign Performance Score 설계 및 예산 액션 후보 분류
+* 초기 KPI 기반 D7 ROAS 예측 모델과 예측 오차 분석
+
+* Repository: [`mobile-game-retention-review-ua-analysis`](./mobile-game-retention-review-ua-analysis)
+
+---
+
 ## Skill Evidence
 
 ### SQL Practice
@@ -134,6 +150,7 @@ Olist 공개 이커머스 주문·결제·배송·리뷰 데이터를 SQLite에 
 ├── ecommerce-ranking-analysis/
 ├── olist-ecommerce-analysis/
 ├── supply-chain-delay-risk-scoring/
+├── mobile-game-retention-review-ua-analysis/
 ├── sql-practice/
 └── pandas-preprocessing-cases/
 ```
