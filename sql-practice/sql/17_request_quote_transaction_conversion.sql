@@ -1,10 +1,21 @@
 -- 17_request_quote_transaction_conversion.sql
--- Purpose: 카테고리별 요청 → 견적 수신 → 거래 성사 전환율 계산
--- Assumption: synthetic tables `requests`, `quotes`, `transactions`, `categories`
--- Grain:
---   requests: one row per customer request
---   quotes: one row per provider quote
---   transactions: one row per completed transaction
+-- Case: Local Service Marketplace Product Analytics
+-- Business Question:
+--   Which service categories convert customer requests into provider quotes and completed transactions?
+--
+-- Product Decision:
+--   Separate request-to-quote conversion from quote-to-transaction conversion.
+--   A category with low quote receive rate may have supply or matching issues.
+--   A category with high quote receive rate but low transaction rate may have price, trust, or quote quality issues.
+--
+-- Data Assumption:
+--   synthetic tables: requests, quotes, transactions, categories
+--   requests grain: one row per customer request
+--   quotes grain: one row per provider quote
+--   transactions grain: one row per completed transaction
+--
+-- Join Caution:
+--   quotes can be 1:N by request_id, so quotes must be pre-aggregated before joining to requests.
 
 WITH quote_by_request AS (
     SELECT
@@ -50,7 +61,8 @@ GROUP BY category_id, category_name
 HAVING COUNT(DISTINCT request_id) >= 30
 ORDER BY request_to_transaction_rate DESC;
 
--- Interpretation guide:
--- 1. request_to_quote_rate가 낮은 카테고리는 전문가 공급 부족 또는 요청서 품질 문제를 의심할 수 있다.
--- 2. request_to_quote_rate는 높지만 quote_to_transaction_rate가 낮은 카테고리는 가격·신뢰·경쟁 견적 품질을 점검해야 한다.
--- 3. avg_quotes_per_request가 높아도 거래율이 낮다면 견적 수 자체보다 견적 품질 또는 고객 기대치가 문제일 수 있다.
+-- Interpretation Guide:
+-- 1. Low request_to_quote_rate: check provider supply, local matching coverage, request form quality, or category demand spikes.
+-- 2. High request_to_quote_rate but low quote_to_transaction_rate: check price expectation, provider trust signals, quote quality, or customer follow-up friction.
+-- 3. High avg_quotes_per_request but low transaction rate: more quotes may not be enough; quote relevance and provider information may matter more.
+-- 4. The HAVING threshold reduces noise from categories with too few requests.
