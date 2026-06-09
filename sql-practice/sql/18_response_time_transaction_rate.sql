@@ -1,7 +1,19 @@
 -- 18_response_time_transaction_rate.sql
--- Purpose: 전문가 첫 응답 시간대별 거래 성사율 계산
--- Assumption: synthetic tables `requests`, `quotes`, `transactions`
--- SQLite syntax 기준
+-- Case: Local Service Marketplace Product Analytics
+-- Business Question:
+--   Are requests with faster first provider response associated with higher transaction rates?
+--
+-- Product Decision:
+--   If faster response buckets show higher transaction rates, product teams can design hypotheses around
+--   provider notifications, request prioritization, faster quote nudges, or supply activation.
+--
+-- Caution:
+--   This query shows association, not causality.
+--   Category, region, price range, provider rating, request time, and customer intent should be checked before making decisions.
+--
+-- Data Assumption:
+--   synthetic tables: requests, quotes, transactions
+--   SQLite syntax
 
 WITH first_quote AS (
     SELECT
@@ -33,7 +45,7 @@ response_bucket AS (
         first_response_minutes,
         has_transaction,
         CASE
-            WHEN first_response_minutes IS NULL THEN 'no_quote'
+            WHEN first_response_minutes IS NULL THEN '00_no_quote'
             WHEN first_response_minutes <= 10 THEN '01_0_10min'
             WHEN first_response_minutes <= 30 THEN '02_10_30min'
             WHEN first_response_minutes <= 60 THEN '03_30_60min'
@@ -54,7 +66,8 @@ FROM response_bucket
 GROUP BY response_time_bucket
 ORDER BY response_time_bucket;
 
--- Interpretation guide:
--- 1. 빠른 응답 구간의 거래율이 높다면, 전문가 첫 응답 속도 개선 실험을 설계할 수 있다.
--- 2. 단, 응답 시간과 거래 성사율의 관계는 인과로 단정하지 않는다.
--- 3. 카테고리, 가격, 지역, 전문가 평점, 고객 예산을 함께 통제하는 추가 분석이 필요하다.
+-- Interpretation Guide:
+-- 1. Compare transaction_rate across response_time_bucket values.
+-- 2. A high no_quote share may indicate provider supply shortage or poor request matching.
+-- 3. Faster response buckets with higher transaction rates can support an experiment hypothesis, not a causal conclusion.
+-- 4. Follow-up analysis should segment by category, region, request hour, provider rating, and expected budget.
