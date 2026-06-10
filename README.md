@@ -122,6 +122,22 @@ Cookie Cats A/B 테스트, Google Play 게임 리뷰 수집, 보조 캠페인 �
 
 ---
 
+### 7. AI Agent Response Evaluation
+
+Claude 응답 90건을 기준으로 지시 준수·근거성·맥락 이해·안전성 오류를 라벨링하고, 복합 프롬프트에서의 실패 패턴을 분석한 미니 프로젝트입니다.
+
+**보여주는 역량**
+
+* 한국어 AI 응답 평가용 프롬프트 설계
+* 지시사항 준수·근거성·맥락 이해·안전성 기준의 평가 체계 구성
+* 응답 오류 유형 라벨링 및 대표 사례 분석
+* 환불·책임·AI 추천·데이터 해석 맥락의 위험 표현 개선
+* 개선 응답 작성 및 평가 데이터셋 구조화
+
+* Repository: [`ai-agent-response-evaluation`](./ai-agent-response-evaluation)
+
+---
+
 ## Skill Evidence
 
 ### SQL Practice
@@ -151,6 +167,12 @@ Cookie Cats A/B 테스트, Google Play 게임 리뷰 수집, 보조 캠페인 �
 ├── olist-ecommerce-analysis/
 ├── supply-chain-delay-risk-scoring/
 ├── mobile-game-retention-review-ua-analysis/
+├── ai-agent-response-evaluation/
+│   ├── README.md
+│   ├── data/
+│   │   └── ai_response_evaluation_dataset_90.csv
+│   └── docs/
+│       └── error_analysis_summary.md
 ├── sql-practice/
 └── pandas-preprocessing-cases/
 ```
