@@ -138,6 +138,22 @@ Claude 응답 90건을 기준으로 지시 준수·근거성·맥락 이해·안
 
 ---
 
+### 8. Pocari Consumer Reaction Analysis
+
+포카리스웨트 관련 네이버 블로그 공개 검색 데이터와 일부 상세 본문을 수집해 사용 맥락, 제품 반응, CX/마케팅 신호를 분류한 미니 프로젝트입니다.
+
+**보여주는 역량**
+
+* Selenium·BeautifulSoup 기반 공개 검색 데이터 수집
+* 검색결과 카드 566건과 상세 본문 샘플 150건 수집
+* 실제 텍스트 기준 제품 타입 재분류 및 비교군 분리
+* 사전 기반 다중 라벨링으로 사용 맥락·제품 반응·CX 신호 구조화
+* 분석 한계를 명시한 뒤 제품 커뮤니케이션·A/B 테스트 가설 후보 제안
+
+* Repository: [`pocari-consumer-reaction-analysis`](./pocari-consumer-reaction-analysis)
+
+---
+
 ## Skill Evidence
 
 ### SQL Practice
@@ -173,6 +189,8 @@ Claude 응답 90건을 기준으로 지시 준수·근거성·맥락 이해·안
 │   │   └── ai_response_evaluation_dataset_90.csv
 │   └── docs/
 │       └── error_analysis_summary.md
+├── pocari-consumer-reaction-analysis/
+│   └── README.md
 ├── sql-practice/
 └── pandas-preprocessing-cases/
 ```
