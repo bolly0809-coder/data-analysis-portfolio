@@ -1,0 +1,8 @@
+﻿axis,label,count,ratio,base_n
+product_signal,당/칼로리,133,0.8926174496644296,149
+product_signal,맛,130,0.87248322147651,149
+product_signal,용량/패키지,123,0.825503355704698,149
+product_signal,기능감/효과,117,0.785234899328859,149
+product_signal,대체재 비교,93,0.6241610738255033,149
+product_signal,브랜드 신뢰,74,0.4966442953020134,149
+product_signal,가격,72,0.48322147651006714,149
