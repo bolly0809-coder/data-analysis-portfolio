@@ -20,10 +20,17 @@ venv/
 # Private/raw data
 data/private/
 private/
+data/raw/
+raw_data/
 *잡플래닛*.xlsx
 *jobplanet*.xlsx
 *raw*.xlsx
+*.parquet
+*.feather
 
-# Model binaries
+# Model binaries and archives
 *.pkl
 *.joblib
+*.zip
+*.7z
+*.rar
