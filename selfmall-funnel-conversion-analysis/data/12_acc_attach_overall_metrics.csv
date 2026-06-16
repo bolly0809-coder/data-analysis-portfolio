@@ -1,0 +1,7 @@
+metric,value,description
+shoe_orders,2069.0,신발이 포함된 전체 주문 수
+shoe_acc_orders,369.0,신발과 ACC가 함께 포함된 주문 수
+acc_attach_rate_among_shoe_orders,0.17834702754954085,신발 주문 중 ACC 동반구매율
+shoe_only_avg_net_revenue,80351.44117647059,신발 단독 주문 평균 순매출
+shoe_acc_avg_net_revenue,95384.9593495935,신발+ACC 주문 평균 순매출
+aov_lift_rate_shoe_acc_vs_shoe_only,0.18709705704102775,신발+ACC 주문의 객단가 상승률
