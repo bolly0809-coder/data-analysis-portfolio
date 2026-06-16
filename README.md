@@ -10,15 +10,27 @@ SQL, Python/pandas, 텍스트 분석, 공공데이터 결합, 지표 설계, 시
 
 | 구분 | 내용 |
 |---|---|
-| 지원 직무 | 데이터 분석가, 비즈니스 데이터 분석, 서비스/Product 데이터 분석 |
+| 지원 직무 | 데이터 분석가, 비즈니스 데이터 분석, 서비스/Product 데이터 분석, 자사몰/마케팅 데이터 분석 |
 | 관심 도메인 | 커머스, 플랫폼 서비스, 광고·마케팅 성과 분석, 에듀테크, 공공데이터 분석 |
-| 핵심 역량 | SQL, Python, pandas, 텍스트마이닝, 지표 설계, 시각화, 리포팅 |
+| 핵심 역량 | SQL, Python, pandas, 지표 설계, 퍼널/코호트 분석, 텍스트마이닝, 시각화, 리포팅 |
 
 ---
 
 ## Projects
 
-### 1. Job Review & Posting Analysis
+### 1. Self-mall Funnel Conversion Analysis
+
+패션/스니커즈 자사몰을 가정한 샘플 행동 로그 데이터를 생성하고, 고객 여정 퍼널·마케팅 채널 성과·재구매/LTV·A/B 테스트·UX 개선 우선순위를 분석한 프로젝트입니다.
+
+- GA4식 이벤트 구조를 참고해 session, event, order, campaign 테이블 설계
+- 방문 → 상품조회 → 장바구니 → 결제시작 → 구매 단계별 전환율과 이탈률 분석
+- 채널별 CTR, CVR, ROAS, CPA 비교 및 예산 확대/점검 후보 도출
+- 사이즈 가이드, 포토리뷰, 모바일 결제, ACC 동반구매 기반 UX/CRM 액션 제안
+- Repository: [`selfmall-funnel-conversion-analysis`](./selfmall-funnel-conversion-analysis)
+
+---
+
+### 2. Job Review & Posting Analysis
 
 기업 리뷰 텍스트를 전처리·분석·점수화하고, 채용공고 데이터와 결합해 구직자의 지원 판단을 돕는 데이터 기반 취업 지원 서비스 프로젝트입니다.
 
@@ -29,7 +41,7 @@ SQL, Python/pandas, 텍스트 분석, 공공데이터 결합, 지표 설계, 시
 
 ---
 
-### 2. Seoul Isolation Risk Analysis
+### 3. Seoul Isolation Risk Analysis
 
 서울시 행정동 단위 공공데이터와 서울 빅데이터캠퍼스의 생활인구·생활이동 데이터를 결합해 생애주기별 사회적 고립 위험지역을 분석한 프로젝트입니다.
 
@@ -40,7 +52,7 @@ SQL, Python/pandas, 텍스트 분석, 공공데이터 결합, 지표 설계, 시
 
 ---
 
-### 3. Ecommerce Ranking Analysis
+### 4. Ecommerce Ranking Analysis
 
 쿠팡·네이버쇼핑 건강식품 랭킹 상품 데이터를 수집해 가격, 리뷰 수, 평점, 상품명 소구 키워드, 랭킹 기준별 상품 구성 차이를 분석한 프로젝트입니다.
 
@@ -51,7 +63,7 @@ SQL, Python/pandas, 텍스트 분석, 공공데이터 결합, 지표 설계, 시
 
 ---
 
-### 4. Olist Ecommerce Analysis
+### 5. Olist Ecommerce Analysis
 
 Olist 공개 이커머스 주문·결제·배송·리뷰 데이터를 SQLite에 적재하고, SQL 기반으로 월별 KPI, 카테고리별 매출 기여도, 배송 지연율과 리뷰 점수 차이를 분석한 프로젝트입니다.
 
@@ -62,7 +74,7 @@ Olist 공개 이커머스 주문·결제·배송·리뷰 데이터를 SQLite에 
 
 ---
 
-### 5. Supply Chain Delay Risk Scoring
+### 6. Supply Chain Delay Risk Scoring
 
 공급망 주문 데이터를 활용해 배송 지연 가능성을 예측하고, 주문별 리스크 스코어를 산출한 프로젝트입니다.
 
@@ -74,7 +86,7 @@ Olist 공개 이커머스 주문·결제·배송·리뷰 데이터를 SQLite에 
 
 ---
 
-### 6. Mobile Game Retention Review UA Analysis
+### 7. Mobile Game Retention Review UA Analysis
 
 Cookie Cats A/B 테스트, Google Play 리뷰, 보조 UA 캠페인 데이터를 활용해 모바일 게임의 리텐션 변화, UX 신호, UA 성과 판단 구조를 분석한 프로젝트입니다.
 
@@ -85,7 +97,7 @@ Cookie Cats A/B 테스트, Google Play 리뷰, 보조 UA 캠페인 데이터를 
 
 ---
 
-### 7. AI Agent Response Evaluation
+### 8. AI Agent Response Evaluation
 
 한국어 AI 에이전트 응답 90건을 평가해 지시 준수, 근거성, 맥락 이해, 안전성 오류를 라벨링하고 실패 패턴을 분석한 프로젝트입니다.
 
@@ -96,7 +108,7 @@ Cookie Cats A/B 테스트, Google Play 리뷰, 보조 UA 캠페인 데이터를 
 
 ---
 
-### 8. Pocari Consumer Reaction Analysis
+### 9. Pocari Consumer Reaction Analysis
 
 포카리스웨트 관련 네이버 블로그 공개 검색 데이터와 일부 상세 본문을 수집해 사용 맥락, 제품 반응, CX/마케팅 신호를 분류한 프로젝트입니다.
 
@@ -130,6 +142,7 @@ SQL 기반 데이터 추출·집계 역량을 보여주기 위해 구성한 보�
 ```text
 .
 ├── README.md
+├── selfmall-funnel-conversion-analysis/
 ├── job-review-analysis/
 ├── seoul-isolation-risk-analysis/
 ├── ecommerce-ranking-analysis/
