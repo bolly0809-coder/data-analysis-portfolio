@@ -1,0 +1,8 @@
+priority,finding,diagnosis,recommended_action,test_or_metric
+1,"상품 상세 조회 후 장바구니 전환율이 18.3%로 낮고, 이 구간 이탈률이 81.7%로 가장 큼","상품 관심은 발생하지만 사이즈, 착용감, 포토리뷰, 혜택 정보가 장바구니 결정을 충분히 밀어주지 못하는 상황으로 해석 가능","PDP 상단에 포토리뷰, 사이즈 가이드, 배송/쿠폰 혜택, 착용컷을 강화","view_item → add_to_cart rate, PDP scroll/click event, review_top A/B test"
+2,"모바일 결제 시작 후 구매 전환율은 68.7%, 데스크톱은 82.0%로 모바일이 13.3%p 낮음",모바일 결제 단계의 입력/쿠폰/배송비/결제수단 UX에서 이탈 가능성,"모바일 결제 페이지에서 총 결제금액, 쿠폰 적용, 배송비, 간편결제 버튼을 사전 노출","begin_checkout → purchase rate by device, mobile checkout A/B test"
+3,"Paid Social은 이벤트 기반 CTR 18.0%로 높지만 CVR 3.3%, ROAS 0.12로 낮음",소재는 관심을 끌지만 랜딩 상품/혜택/가격 기대와 불일치할 가능성,"소셜 광고 소재 문구와 랜딩 PDP의 가격/혜택/스타일 메시지를 일치시키고, 클릭 이후 PDP 이탈률을 추적",select_promotion → view_item → add_to_cart → purchase by campaign
+4,"Retargeting ROAS 2.87, Paid Search ROAS 1.42로 유료 채널 중 상대적으로 양호",구매 의도가 이미 형성된 고객군에서 예산 효율이 높음,"Retargeting과 Paid Search는 예산 유지/확대 후보로 두되, 증액 시 한계 ROAS를 같이 모니터링","channel ROAS, CPA, marginal ROAS"
+5,"사이즈 가이드 조회 세션의 장바구니율은 20.3%, 미조회 세션은 11.2%",신발 자사몰에서는 사이즈 불확실성 해소가 구매 전환에 중요한 신뢰 신호로 작동 가능,사이즈 가이드 진입 버튼을 PDP 상단/사이즈 선택 영역 근처에 고정 배치,"size_guide_viewed vs not_viewed conversion, size guide CTA click rate"
+6,"review_top variant의 장바구니율은 19.9%, control은 16.8%, p-value 9.1e-10",리뷰 신뢰 요소를 상단에 노출하는 구성은 장바구니 전환 개선 후보로 볼 수 있음,포토리뷰/착용후기 영역 상단 노출을 실제 자사몰에서 A/B 테스트 후보로 제안,"add_to_cart_rate, purchase_rate, p-value"
+7,"신발 주문 중 ACC 동반구매율은 17.8%이며, 신발+ACC 주문 객단가는 95,385원으로 신발 단독 주문 80,351원 대비 18.7% 높음","신발 구매 고객에게 양말, 가방, 캡 등 ACC를 함께 제안하면 객단가 상승 여지가 있음",PDP/장바구니/결제 직전 단계에 신발 라인별 ACC 추천 모듈을 배치하고 묶음 혜택을 테스트,"ACC attach rate, AOV, add-on module CTR, bundle purchase rate"
