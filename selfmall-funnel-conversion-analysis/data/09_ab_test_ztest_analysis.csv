@@ -1,0 +1,3 @@
+variant,exposures,add_to_cart,purchases,add_to_cart_rate,purchase_rate,add_to_cart_lift_vs_control_pp,add_to_cart_lift_vs_control_pct,add_to_cart_z,add_to_cart_p_value,purchase_lift_vs_control_pp,purchase_lift_vs_control_pct,purchase_z,purchase_p_value
+control,11090,1858,987,0.16753832281334535,0.08899909828674482,0.0,0.0,,,0.0,0.0,,
+review_top,11017,2197,1208,0.19941907960424798,0.1096487246981937,0.03188075679090263,0.1902893395108236,6.123967594390039,9.127347766479943e-10,0.02064962641144888,0.23202062502833654,5.133337849826592,2.846482729523814e-07
