@@ -1,8 +1,0 @@
-﻿check_item,value,description
-raw_rows,400,통합 직후 원본 행 수
-cleaned_rows,400,기본 전처리 후 행 수
-ranking_view_rows,400,랭킹 화면 기준 분석 데이터 행 수
-unique_product_rows,267,고유 상품 기준 데이터 행 수
-raw_unique_product_key_raw_check,266,원본 통합 단계의 상품 키 후보 고유 수
-cleaned_unique_product_key,266,전처리 후 product_key 고유 수
-unique_product_key_count,266,고유 상품 테이블의 product_key 고유 수

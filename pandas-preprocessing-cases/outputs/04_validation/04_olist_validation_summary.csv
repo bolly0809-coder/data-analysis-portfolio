@@ -1,6 +1,0 @@
-﻿validation_area,check_item,result,status,interpretation
-olist_base_table,order_base_order_id_uniqueness,duplicate_order_id_count=0,PASS,주문 단위 base table에서 order_id가 중복되지 않는지 확인했다.
-olist_base_table,item_base_order_item_grain,"duplicate_order_id_count=13719, duplicate_order_item_key_count=0",PASS,"상품 단위 base table에서 order_id 중복은 정상이며, order_id+order_item_id 조합이 고유한지 확인했다."
-olist_base_table,naive_join_row_increase,"naive_join_rows=119143, distinct_orders=99441",PASS,원본 테이블을 한 번에 JOIN하면 행 수가 증가해 주문 단위 KPI가 왜곡될 수 있음을 확인했다.
-olist_base_table,pre_aggregation_tables,pre_aggregation_tables=2,PASS,결제와 리뷰를 주문 단위로 사전 집계한 테이블을 확인했다.
-olist_base_table,analysis_question_mapping,mapping_rows=7,PASS,분석 질문별로 주문 단위/상품 단위 base table 선택 기준을 정리했다.

@@ -1,5 +1,0 @@
-﻿platform,ranking_type,ranking_label,rows,unique_product_key,missing_price,missing_rating,median_price,mean_price,median_review_count,mean_review_count,median_rating,mean_rating,top20_count,duplicate_key_rows
-coupang,coupang_rank,쿠팡랭킹순,100,100,0,0,12900.0,16941.7,8872.5,26663.47,5.0,4.88,20,0
-coupang,coupang_sales,판매량순,100,100,0,0,19900.0,24048.5,7828.0,20568.91,5.0,4.925,20,0
-naver_shopping,naver_buy_daily,많이구매한BEST_일간,100,98,0,0,58180.0,80548.7,12907.0,27940.99,4.9,4.849,20,4
-naver_shopping,naver_buy_weekly,많이구매한BEST_주간,100,96,0,0,52950.0,80663.4,16141.0,33759.34,4.9,4.852,20,8

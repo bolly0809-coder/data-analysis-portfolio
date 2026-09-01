@@ -1,5 +1,0 @@
-﻿platform,ranking_type,ranking_label,rows,unique_product_key,rank_min,rank_max,missing_price,missing_review_count,missing_rating,duplicate_key_rows,top20_count
-coupang,coupang_rank,쿠팡랭킹순,100,100,1,100,0,0,0,0,20
-coupang,coupang_sales,판매량순,100,100,1,100,0,0,0,0,20
-naver_shopping,naver_buy_daily,많이구매한BEST_일간,100,98,1,100,0,0,0,2,20
-naver_shopping,naver_buy_weekly,많이구매한BEST_주간,100,96,1,100,0,0,0,4,20

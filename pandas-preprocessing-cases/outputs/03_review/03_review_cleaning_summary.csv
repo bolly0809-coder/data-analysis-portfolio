@@ -1,7 +1,0 @@
-﻿check_item,value,description
-original_review_rows,2100.0,원본 리뷰 행 수
-long_format_text_rows,8400.0,텍스트 유형별 long format 행 수
-empty_clean_text_rows,0.0,정제 후 공백 텍스트 수
-short_text_rows_under_10_chars,0.0,10자 미만 텍스트 수
-avg_review_length,41.92,평균 텍스트 길이
-median_review_length,34.0,중앙값 텍스트 길이

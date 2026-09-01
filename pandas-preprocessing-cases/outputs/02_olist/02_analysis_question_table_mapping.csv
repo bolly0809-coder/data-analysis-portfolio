@@ -1,8 +1,0 @@
-﻿analysis_question,recommended_table,grain,reason
-월별 주문 수는 어떻게 변화했는가?,order_base_delivered,배송 완료 주문 1건,주문 수는 order_id 기준으로 중복 없이 집계해야 함
-월별 매출과 객단가는 어떻게 변화했는가?,order_base_delivered,배송 완료 주문 1건,결제금액은 payment_by_order로 주문 단위 사전 집계되어 있음
-배송 지연율은 지역별로 어떻게 다른가?,order_base_delivered,배송 완료 주문 1건,배송일과 지연 여부는 주문 단위 지표
-배송 지연 구간별 리뷰 점수는 어떻게 다른가?,order_base_delivered,배송 완료 주문 1건,리뷰 점수는 review_by_order로 주문 단위 사전 집계되어 있음
-카테고리별 매출 기여도는 어떻게 다른가?,order_item_base_delivered,배송 완료 주문상품 1행,상품 카테고리와 price는 주문상품 행 기준 지표
-판매자 지역별 상품 매출은 어떻게 다른가?,order_item_base_delivered,배송 완료 주문상품 1행,seller_id와 seller_state는 상품 행에 연결되는 분석 기준
-상품 가격 분포는 어떻게 나타나는가?,order_item_base_delivered,배송 완료 주문상품 1행,상품 가격 price는 item 단위 컬럼

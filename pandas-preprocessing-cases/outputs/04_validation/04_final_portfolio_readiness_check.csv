@@ -1,5 +1,0 @@
-﻿portfolio_component,readiness,main_evidence,caution
-01_product_data_cleaning,READY,실제 이커머스 랭킹 상품 CSV 기반. raw→cleaned→ranking_view→unique_product 흐름과 랭킹 기준별 품질 점검 포함.,product_key는 완전한 상품 식별자가 아니라 중복 완화 기준으로 설명해야 함.
-02_olist_base_table_design,READY,"실제 Olist DB 기반. 테이블 grain, naive JOIN 위험, 사전 집계, 주문/상품 base table 검증 포함.",order_base와 item_base의 기준 단위 차이를 명확히 설명해야 함.
-03_review_text_preprocessing,READY_WITH_LIMITATION,"실제 잡플래닛 리뷰 원문과 실제 사전 3종 기반. long format, 표준화, 카테고리 매핑, 기업 단위 요약 포함.",사전 기반 방식은 문맥 반전/비꼼/사전 미등록 표현을 완벽히 처리하지 못하므로 보조 지표로 설명해야 함.
-04_preprocessing_validation_summary,READY,01~03 결과물을 통합해 PASS/CHECK/LIMITATION 기준으로 품질 검증.,이 노트북은 분석 결과가 아니라 전처리 QA 리포트로 설명해야 함.

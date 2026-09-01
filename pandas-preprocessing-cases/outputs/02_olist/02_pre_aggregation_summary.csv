@@ -1,3 +1,0 @@
-﻿source_table,pre_aggregated_table,source_rows,source_unique_order_id,pre_aggregated_rows,pre_aggregated_unique_order_id,message
-order_payments,payment_by_order,103886,99440,99440,99440,결제 원본은 주문 1건에 여러 행이 있을 수 있어 주문 단위로 사전 집계
-order_reviews,review_by_order,99224,98673,98673,98673,리뷰 원본은 주문별 리뷰 결측/중복 가능성이 있어 주문 단위로 사전 집계
