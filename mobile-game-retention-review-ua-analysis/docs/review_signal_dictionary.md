@@ -1,9 +1,0 @@
-| signal_category    | display_name   | patterns                                                                                                                                               |
-|:-------------------|:---------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ad_complaint       | 광고 불만      | \bads?\b | too many ads | so many ads | forced ads? | ad after | every level.*ad | watch.*ad | advertisement | commercial | pop.?up ads? | unskippable |
-| reward             | 보상/리워드    | \breward | \bcoins?\b | \bbonus | daily reward | free coins? | gift | prize                                                                            |
-| difficulty         | 난이도         | too hard | too easy | difficult | impossible | \blevel\b | stuck | challenge                                                                           |
-| repetition_boredom | 반복성/지루함  | boring | repetitive | same level | same thing | repeat | nothing new                                                                                   |
-| bug_performance    | 오류/성능      | \bbug | crash | lag | freeze | glitch | not loading | won.?t open | fix | issue | error                                                                |
-| payment_iap        | 과금/IAP       | \bpay\b | paid | purchase | in.?app | expensive | money | subscription | refund                                                                        |
-| positive_fun       | 재미/긍정      | \bfun\b | addictive | love | great | best game | enjoy | satisfying | awesome                                                                          |

@@ -1,6 +1,0 @@
-﻿part,topic,main_result,difference,statistical_result,interpretation
-Part 3. Campaign KPI/ROAS/ML,채널별 D7 ROAS,"최고 Unity Ads 0.0647, 최저 TikTok 0.0354",-,-,채널별 유입 비용뿐 아니라 유입 이후 수익성 차이를 함께 확인해야 한다.
-Part 3. Campaign KPI/ROAS/ML,CPI와 ROAS의 차이,최저 CPI 채널: TikTok 4.71,D7 ROAS 0.0354,-,"CPI가 낮은 채널이 반드시 좋은 채널은 아니며, D7 Retention과 D7 ROAS를 함께 봐야 한다."
-Part 3. Campaign KPI/ROAS/ML,Scale 후보,3개 캠페인,평균 D7 ROAS 0.0757,-,성과 점수가 높은 캠페인은 예산 확대 후보로 분류했다.
-Part 3. Campaign KPI/ROAS/ML,Reduce 후보,10개 캠페인,평균 D7 ROAS 0.0369,-,성과 점수가 낮은 캠페인은 예산 축소 또는 소재/타겟 점검 후보로 분류했다.
-Part 3. Campaign KPI/ROAS/ML,D7 ROAS 예측 모델,"Linear Regression MAE 0.0097, R² 0.538",-,-,"모델 성능 자체를 과장하지 않고, 예측 오차가 큰 세그먼트를 확인해 Feature Engineering 개선 방향을 도출하는 데 초점을 두었다."
