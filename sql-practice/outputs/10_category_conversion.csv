@@ -1,7 +1,0 @@
-﻿service_category,request_count,quote_count,transaction_count,quote_receive_rate_pct,request_to_transaction_rate_pct,avg_response_minutes,avg_transaction_amount
-운동,42,32,17,76.19,40.48,100.16,77938.13
-청소,30,25,10,83.33,33.33,78.04,54707.21
-이사,41,32,13,78.05,31.71,67.38,66193.49
-과외,37,29,11,78.38,29.73,79.62,78405.32
-사진촬영,57,44,15,77.19,26.32,78.07,68107.14
-인테리어,38,28,9,73.68,23.68,86.71,46303.37

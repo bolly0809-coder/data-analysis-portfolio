@@ -1,8 +1,0 @@
-﻿step,users,conversion_from_visit_pct,conversion_from_previous_step_pct
-01_visit,500,100.0,
-02_search,463,92.6,92.6
-03_view_provider,387,77.4,83.59
-04_submit_request,194,38.8,50.13
-05_view_quote,166,33.2,85.57
-06_complete_transaction,72,14.4,43.37
-07_write_review,42,8.4,58.33
