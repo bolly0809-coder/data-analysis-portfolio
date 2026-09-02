@@ -119,6 +119,17 @@ Cookie Cats A/B 테스트, Google Play 리뷰, 보조 UA 캠페인 데이터를 
 
 ---
 
+### 10. California Housing Price Prediction
+
+캘리포니아 인구조사 구역의 주택 중위가격을 대상으로 데이터 품질 점검, EDA, 파생변수 설계, 11개 회귀모형 비교, 최종 CatBoost 평가와 SHAP 해석을 수행했습니다.
+
+- 데이터 품질 → EDA → 전처리 → 모델링 → 해석을 실행 완료 노트북 5개로 구성
+- 최종 평가 R² 약 0.785, RMSE 0.2659(로그 척도)
+- 소득·입지·주거 구조 변수의 예측 기여도와 과적합·공간분석 한계 정리
+- Repository: [`california-housing-price-prediction`](./california-housing-price-prediction)
+
+---
+
 ## Skill Evidence
 
 ### SQL Practice
@@ -151,6 +162,7 @@ SQL 기반 데이터 추출·집계 역량을 보여주기 위해 구성한 보�
 ├── mobile-game-retention-review-ua-analysis/
 ├── ai-agent-response-evaluation/
 ├── pocari-consumer-reaction-analysis/
+├── california-housing-price-prediction/
 ├── sql-practice/
 └── pandas-preprocessing-cases/
 ```

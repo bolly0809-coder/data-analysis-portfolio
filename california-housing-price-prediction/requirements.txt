@@ -1,0 +1,26 @@
+# 원본 노트북 실행 환경: Python 3.13.9
+# jussam은 hossam API를 다시 노출하는 공개 호환 패키지입니다.
+jussam==0.5.13
+hossam==0.5.17
+numpy>=2.0,<3.0
+pandas>=2.3,<3.0
+scipy>=1.15,<2.0
+matplotlib>=3.10,<4.0
+seaborn>=0.13,<1.0
+scikit-learn>=1.7,<2.0
+statsmodels>=0.14,<1.0
+pingouin>=0.5,<1.0
+statannotations>=0.7,<1.0
+openpyxl>=3.1,<4.0
+joblib>=1.5,<2.0
+kneed>=0.8,<1.0
+geopandas>=1.1,<2.0
+libpysal>=4.13,<5.0
+esda>=2.8,<3.0
+pyproj>=3.7,<4.0
+xgboost==3.4.1
+lightgbm==4.7.0
+catboost==1.2.10
+shap>=0.49,<1.0
+jupyterlab>=4.4,<5.0
+ipykernel>=6.30,<7.0

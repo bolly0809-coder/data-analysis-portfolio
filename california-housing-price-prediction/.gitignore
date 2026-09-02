@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# 운영체제·IDE 파일
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# 현재 실행의 모델과 학습 로그는 로컬 보존, Git 업로드 제외
+notebooks/ml_models/
+notebooks/catboost_info/
