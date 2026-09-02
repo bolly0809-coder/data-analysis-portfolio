@@ -141,6 +141,17 @@ Cookie Cats A/B 테스트, Google Play 리뷰, 보조 UA 캠페인 데이터를 
 
 ---
 
+### 12. 연수입과 지출점수로 고객을 나누면 어떤 고객군이 보이는가
+
+Mall Customers 고객 200명의 연수입·지출점수를 표준화하여 5개 군집을 구성하고, 군집별 특성과 경계 사례를 진단했습니다.
+
+- 엘보우·실루엣·균형지수 비교: k=5 실루엣 약 0.555 / k=2 약 0.315
+- 실루엣 0.1 이하 경계 검토 고객 6명(3.0%), 그중 음수 고객 2명 확인
+- k=2·k=5 배정 비교, 나이·성별 페르소나, 활용 가설·실험 계획을 실행 결과와 구분하여 정리
+- 분석 요약 · 핵심 결과 · 참고자료 · 회고: [`mall-customers-segmentation`](./mall-customers-segmentation)
+
+---
+
 ## Skill Evidence
 
 ### SQL Practice
@@ -175,6 +186,7 @@ SQL 기반 데이터 추출·집계 역량을 보여주기 위해 구성한 보�
 ├── pocari-consumer-reaction-analysis/
 ├── california-housing-price-prediction/
 ├── diamonds-price-analysis/
+├── mall-customers-segmentation/
 ├── sql-practice/
 └── pandas-preprocessing-cases/
 ```
