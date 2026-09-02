@@ -1,87 +1,57 @@
-# California Housing 주택가격 예측
+# 소득과 입지, 주거 구조로 캘리포니아 주택가격을 예측할 수 있는가
 
-> 지역별 주택가격과 관련된 소득·입지·주거 구조를 탐색하고, 11개 회귀모형 비교부터 최종 CatBoost의 설명까지 연결한 분석입니다.
+**작성자:** bolly0809-coder &nbsp;&nbsp;|&nbsp;&nbsp; **작성일:** 2026-09-02
+
+![Python](https://img.shields.io/badge/Python-3.13.9-3776AB?logo=python&logoColor=white) ![pandas](https://img.shields.io/badge/pandas-150458?logo=pandas&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?logo=scikitlearn&logoColor=white) ![CatBoost](https://img.shields.io/badge/CatBoost-FFCC00) ![SHAP](https://img.shields.io/badge/SHAP-Explainable_AI-8957E5)
+
+## 요약 (Executive Summary)
+
+- **데이터:** [California Housing Prices](https://www.kaggle.com/datasets/camnugent/california-housing-prices)
+- **규모:** 원본 20,640개 관측치 × 10개 변수 → 결측치 제거 후 20,433개 관측치
+- **문제 유형:** 예측(회귀)
+
+> 캘리포니아 인구조사 구역의 주택 중위가격(`median_house_value`)을 소득·입지·주거 구조 변수로 예측했다.
+> 데이터 품질 점검과 EDA를 거쳐 비율형·공간 파생변수를 만들고, 로그 변환과 전처리 후 11개 회귀모형을 비교했다.
+> 튜닝 후 **CatBoost를 선택하고, 중요도 기준으로 입력 변수를 9개에서 7개로 줄여 재학습**했다.
+> 최종 평가 R²는 약 **0.785**, RMSE는 **0.2659**, 5-Fold CV RMSE는 **0.2651 ± 0.0016**이었다. RMSE는 로그 가격 척도이며 달러 단위가 아니다.
+> SHAP 상위 변수는 **소득 대리변수(`income_per_person`), 해안권 구분(`ocean_area`), 위치 군집(`special_cluster`)**이었다.
+> 소득과 입지가 모델 예측을 설명하는 주요 정보로 나타났지만, 훈련–CV 오차 격차 **15.66%**의 과대적합 경고가 남아 일반화 성능을 함께 점검해야 한다.
+
+**상세 분석 노트북:** [01. 개요·품질 점검](notebooks/01_프로젝트_개요와_데이터_품질.ipynb) · [02. EDA](notebooks/02_탐색적_데이터_분석.ipynb) · [03. 전처리](notebooks/03_분석용_데이터_전처리.ipynb) · [04. 모델링·튜닝](notebooks/04_회귀모델링과_하이퍼파라미터_튜닝.ipynb) · [05. 진단·해석](notebooks/05_최종모델_평가와_SHAP.ipynb)
 
 ## 핵심 결과
 
-| 항목 | 최종 실행 결과 |
-|---|---:|
-| 평가 R² | 약 0.785 |
-| 평가 RMSE | 0.2659 |
-| 5-Fold CV RMSE | 0.2651 ± 0.0016 |
-| 훈련 RMSE | 0.2236 |
-| 최종 입력 변수 | 7개 |
-| SHAP 설명 표본 | 200행 |
-
-**RMSE는 로그 변환된 주택가격 척도이며 달러 단위 오차가 아닙니다.** 훈련–CV RMSE 격차는 15.66%로, 진단 함수의 15% 경험적 기준에서 과대적합 경고가 남았습니다. 성능과 일반화 한계를 함께 보고합니다.
-
-## 문제와 데이터
-
-지역 규모가 크면 방·침실·인구·가구 수가 함께 커집니다. 단순 총량만으로 가격을 설명하기보다, **소득과 입지, 인구·가구 대비 주거 공간을 구분하면 어떤 예측 정보를 얻을 수 있는가?**를 확인했습니다.
-
-| 구분 | 내용 |
+| 항목 | 내용 |
 |---|---|
-| 데이터 | 1990년 미국 인구조사 기반 California Housing |
-| 분석 단위 | 캘리포니아 인구조사 구역 — 개별 주택이 아님 |
-| 규모 | 원본 20,640행 → 결측치 처리 후 20,433행 |
-| 종속변수 | `median_house_value` — 지역 주택 중위가격 |
-| 분할 | 훈련 16,346행 / 평가 4,087행, `random_state=3217` |
-| 기술 | Python, pandas, 통계검정, scikit-learn, XGBoost, LightGBM, CatBoost, SHAP |
+| 최종 모형 | CatBoost 회귀모형 — 중요도 기준으로 선택한 7개 변수 사용 |
+| 예측 성능 | 평가 R² ≈ 0.785 / RMSE = 0.2659 / MAE ≈ 0.194 — 로그 가격 척도에서 평가 |
+| 검증 구성 | 훈련 16,346행 / 평가 4,087행, `random_state=3217` / 5-Fold CV RMSE = 0.2651 ± 0.0016 |
+| 최종 입력 변수 | `income_per_person`, `ocean_area`, `special_cluster`, `housing_median_age`, `bedrooms_per_room`, `rooms_per_person`, `rooms_per_household` |
+| 주요 설명 변수 | mean\|SHAP\| 기준: 소득 대리변수 0.2283 · 해안권 구분 0.1820 · 위치 군집 0.1292 — 200행 설명 표본 |
+| 일반화 진단 | 훈련 RMSE = 0.2236 / 훈련–CV 격차 15.66% — 도우미 함수의 경험적 15% 기준에서 과대적합 경고 |
+| 이번에 연습한 기법 | 단변량·이변량·다변량 EDA, 비율형·공간 파생변수, 로그 변환, VIF, 회귀모형 비교, GridSearchCV, 중요도 기반 변수 선택, 학습곡선, SHAP |
 
-데이터는 `jussam.load_data()`로 불러옵니다. 01번은 `california_housing`, 02·03번은 품질 점검 데이터와 요약표, 04·05번은 `california_housing_feature_log_labelled`를 사용합니다. **현재 코드는 단계별 데이터 스냅샷을 로더에서 읽으며, 03번에서 저장한 엑셀을 04번이 자동으로 읽는 구조는 아닙니다.**
+## 참고자료
 
-## 분석 과정
+### 데이터 출처
 
-| 단계 | 수행 내용 | 노트북 |
-|---|---|---|
-| 01 | 데이터 구조·타입·중복·결측치, 기술통계 | [프로젝트 개요와 데이터 품질](notebooks/01_프로젝트_개요와_데이터_품질.ipynb) |
-| 02 | 단변량·이변량·다변량 분석, 변수 선택 근거 | [탐색적 데이터 분석](notebooks/02_탐색적_데이터_분석.ipynb) |
-| 03 | 비율형·범주형·공간 파생변수, 검증, 로그 변환·라벨링 | [분석용 데이터 전처리](notebooks/03_분석용_데이터_전처리.ipynb) |
-| 04 | 11개 회귀모형 비교, 5-Fold GridSearchCV | [회귀모델링과 튜닝](notebooks/04_회귀모델링과_하이퍼파라미터_튜닝.ipynb) |
-| 05 | 과적합 진단, 중요도 기반 변수 축소, 재학습, SHAP | [최종모델 평가와 SHAP](notebooks/05_최종모델_평가와_SHAP.ipynb) |
+- 공개 데이터셋: [California Housing Prices — Kaggle](https://www.kaggle.com/datasets/camnugent/california-housing-prices)
+- 데이터 배경: 1990년 미국 인구조사 기반의 캘리포니아 지역 자료. 관측 단위는 **인구조사 구역**이며 개별 주택이 아니다.
+- 실제 로딩 경로: `jussam.load_data()`의 `california_housing` 및 전처리 단계별 데이터셋.
+- 04·05번은 `california_housing_feature_log_labelled`를 불러온다. **03번에서 저장한 엑셀을 04번이 자동으로 이어 읽는 방식은 아니다.**
+- 전체 데이터 엑셀과 모델 바이너리는 저장소에 포함하지 않는다.
 
-노트북에는 실제 실행 출력과 그래프를 함께 저장했습니다. 이 페이지는 결과와 판단을 먼저 보여주고, 세부 코드와 검정 결과는 각 노트북에서 확인할 수 있도록 구성했습니다.
+### 분석 자료와 실행 환경
 
-## 모델 비교와 변수 축소
+- 코드·실행 결과·해석: 위의 01~05번 노트북에 순서대로 수록.
+- 공통 분석 모듈: [`helpers`](notebooks/helpers/) / 실행 패키지: [`requirements.txt`](requirements.txt)
+- 대표 결과: [변수 중요도](assets/feature_importance.png) · [학습곡선](assets/learning_curve.png) · [SHAP 요약](assets/shap_summary.png)
+- 동봉 폰트: Noto Sans KR — [SIL Open Font License](notebooks/helpers/fonts/OFL.txt)
 
-- 튜닝 전에는 SVR이 평가 RMSE 약 0.266으로 1위였습니다.
-- 튜닝 후 비교에서는 CatBoost가 평가 RMSE 약 0.266, R² 약 0.785로 1위였습니다.
-- VIF 처리 후 모델의 9개 변수 중 중요도 누적 95% 기준으로 7개를 채택했습니다. 실제 채택 누적 중요도는 99.37%입니다.
-- 선택변수 재학습·튜닝 후 평가 RMSE는 0.2659였습니다. 변수 축소가 큰 성능 향상을 만들었다고 해석하지 않습니다.
+<details>
+<summary>실행 방법</summary>
 
-![CatBoost 변수 중요도](assets/feature_importance.png)
-
-최종 입력 변수는 `income_per_person`, `ocean_area`, `special_cluster`, `housing_median_age`, `bedrooms_per_room`, `rooms_per_person`, `rooms_per_household`입니다.
-
-## 결과 해석
-
-![최종 CatBoost SHAP 요약](assets/shap_summary.png)
-
-| 변수 | mean\|SHAP\| | 해석 범위 |
-|---|---:|---|
-| `income_per_person` | 0.2283 | 소득과 가구당 인구로 만든 구매력 대리변수. 실제 개인소득 측정값은 아님 |
-| `ocean_area` | 0.1820 | 해안권·내륙 구분에 따른 모델 예측 기여 차이 |
-| `special_cluster` | 0.1292 | 위·경도 기반 군집에 따른 지역적 예측 차이 |
-| `rooms_per_household` | 0.0547 | 가구당 주거 공간과 관련된 예측 기여 |
-| `bedrooms_per_room` | 0.0460 | 방 구성 비율과 관련된 예측 기여 |
-
-소득 대리변수와 입지 변수가 예측 설명에서 상위권을 차지했습니다. Beeswarm에서는 소득 대리변수가 높은 관측치가 대체로 양의 기여를 보입니다. 주거 구조 변수는 추가적인 예측 차이를 설명합니다. 이 중요도는 **가격의 인과적 결정 비율이나 정책 개입 효과가 아닙니다.**
-
-평균 절대 SHAP을 지수화하여 “가격이 평균적으로 ±몇 % 변한다”고 해석하지 않습니다. Dependence Plot의 색상 패턴 역시 상호작용을 탐색하는 단서이지 인과관계의 증명은 아닙니다.
-
-## 일반화 진단과 한계
-
-![최종 모델 학습곡선](assets/learning_curve.png)
-
-- **과적합 신호:** 훈련 오차보다 CV 오차가 높습니다. 15%는 도우미 함수의 경험적 경계값이지 통계적 판정 기준은 아닙니다.
-- **평가 범위:** 무작위 분할과 여러 모델의 평가셋 비교 결과입니다. 독립적인 최종 홀드아웃이나 공간적으로 분리된 미관측 지역의 성능을 보장하지 않습니다.
-- **공간분석 검토:** 현 구현의 `EPSG:5186`은 한국용 좌표계로 캘리포니아 적용에 재검토가 필요합니다. Queen/Rook의 이웃 정의도 함께 검증해야 하며, 이 부분의 Moran's I 결과를 확정적 근거로 사용하지 않습니다. 기존 분석 코드는 임의 교체하지 않았습니다.
-- **군집 수:** 실루엣 최댓값은 `k=2`이지만 이후 분석은 `k=5`를 사용합니다. 선택 근거 보강이 필요합니다.
-- **표본과 시점:** SHAP은 200행 표본을 설명합니다. 1990년 구역 집계 자료를 현재의 개별 주택 감정가격에 직접 적용할 수 없습니다.
-
-## 실행과 공개 범위
-
-Python 3.13 환경을 기준으로 실행했습니다. 프로젝트 폴더에서:
+Python 3.13 환경에서 프로젝트 폴더를 기준으로 실행한다.
 
 ```bash
 python -m pip install -r requirements.txt
@@ -89,8 +59,19 @@ cd notebooks
 jupyter lab
 ```
 
-01~05번을 순서대로 실행합니다. `helpers`는 노트북과 같은 폴더에 있습니다. 04번은 `ml_models/<실행시각>`와 `<실행시각>_tuned`에 모델을 저장하고, 05번은 최신 튜닝 폴더를 읽어 `<실행시각>_importance`에 최종 모델을 저장합니다. 튜닝과 학습곡선 계산에는 시간이 걸릴 수 있습니다.
+01~05번을 순서대로 실행한다. `helpers`는 노트북과 같은 폴더에 있다. 04번은 `ml_models/<실행시각>`와 `<실행시각>_tuned`에 모델을 저장하고, 05번은 최신 튜닝 폴더를 읽어 `<실행시각>_importance`에 최종 모델을 저장한다. CatBoost 튜닝과 학습곡선 계산에는 시간이 걸릴 수 있다.
 
-- 포함: 실행 완료 노트북 5개, 분석 모듈, 의존성 목록, 대표 그래프 3개
-- 제외: 전체 데이터 엑셀, 모델 바이너리, 학습 로그, 캐시, 구버전 파일
-- 동봉한 Noto Sans KR 폰트의 이용 조건은 [SIL Open Font License](notebooks/helpers/fonts/OFL.txt)를 따릅니다.
+</details>
+
+## 회고
+
+- **이번 분석에서 정리한 기법:** 방·침실·인구·가구 수의 총량을 비율형 변수로 바꾸어 규모와 주거 구조를 구분하고, 예측 성능뿐 아니라 학습곡선·변수 중요도·SHAP을 함께 확인했다. 중요도 기준으로 9개 변수 중 7개를 남겼지만, 변수 축소가 큰 성능 향상을 만들었다고 해석하지 않았다.
+- **점검한 지점과 해석 방법:**
+  - ① 로그 가격의 RMSE를 달러 단위 오차로 읽지 않도록 평가 척도를 명시했다. 원본 가격 단위의 오차는 이번 결과만으로 제시하지 않는다.
+  - ② 최종 재학습 결과에 맞춰 선택 변수와 SHAP 설명을 대조했다. `rooms_per_person`은 포함되고 `population_per_household`는 제외되었다.
+  - ③ mean\|SHAP\|은 예측에 대한 평균 절대 기여도다. 이를 지수화해 대칭적인 가격 상승·하락률로 바꾸거나, 변수 중요도를 인과효과로 해석하지 않았다.
+- **다음 분석에서 보완할 점:**
+  - 훈련–CV 격차 15.66%는 과적합 점검 신호다. 여러 모형의 평가셋 비교와 별개로 독립적인 최종 홀드아웃 및 공간 분할 검증이 필요하다.
+  - 공간분석에서 사용한 `EPSG:5186`은 한국용 좌표계이므로 캘리포니아 적용을 재검토해야 한다. Queen/Rook의 이웃 정의도 검증하기 전에는 해당 Moran's I 결과를 확정적 근거로 삼지 않는다.
+  - 실루엣 최댓값은 `k=2`지만 후속 분석에서는 `k=5`를 사용했다. 군집 수 선택 근거를 보완해야 한다.
+  - SHAP은 200행 표본에 대한 설명이고 자료는 1990년의 구역 집계 데이터다. 현재의 개별 주택 감정가격이나 정책 개입 효과로 일반화하지 않는다.
