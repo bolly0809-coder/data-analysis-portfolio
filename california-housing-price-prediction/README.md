@@ -17,7 +17,7 @@
 > SHAP 상위 변수는 **소득 대리변수(`income_per_person`), 해안권 구분(`ocean_area`), 위치 군집(`special_cluster`)**이었다.
 > 소득과 입지가 모델 예측을 설명하는 주요 정보로 나타났지만, 훈련–CV 오차 격차 **15.66%**의 과대적합 경고가 남아 일반화 성능을 함께 점검해야 한다.
 
-**상세 분석 노트북:** [01. 개요·품질 점검](notebooks/01_프로젝트_개요와_데이터_품질.ipynb) · [02. EDA](notebooks/02_탐색적_데이터_분석.ipynb) · [03. 전처리](notebooks/03_분석용_데이터_전처리.ipynb) · [04. 모델링·튜닝](notebooks/04_회귀모델링과_하이퍼파라미터_튜닝.ipynb) · [05. 진단·해석](notebooks/05_최종모델_평가와_SHAP.ipynb)
+**상세 분석 노트북:** [California Housing 주택가격 예측 — 전체 분석과 실행 결과](california-housing-price-prediction.ipynb)
 
 ## 핵심 결과
 
@@ -38,30 +38,16 @@
 - 공개 데이터셋: [California Housing Prices — Kaggle](https://www.kaggle.com/datasets/camnugent/california-housing-prices)
 - 데이터 배경: 1990년 미국 인구조사 기반의 캘리포니아 지역 자료. 관측 단위는 **인구조사 구역**이며 개별 주택이 아니다.
 - 실제 로딩 경로: `jussam.load_data()`의 `california_housing` 및 전처리 단계별 데이터셋.
-- 04·05번은 `california_housing_feature_log_labelled`를 불러온다. **03번에서 저장한 엑셀을 04번이 자동으로 이어 읽는 방식은 아니다.**
+- 모델링·최종 평가 단계는 `california_housing_feature_log_labelled`를 불러온다. **전처리 단계에서 저장한 엑셀을 모델링 단계가 자동으로 이어 읽는 방식은 아니다.**
 - 전체 데이터 엑셀과 모델 바이너리는 저장소에 포함하지 않는다.
 
 ### 분석 자료와 실행 환경
 
-- 코드·실행 결과·해석: 위의 01~05번 노트북에 순서대로 수록.
-- 공통 분석 모듈: [`helpers`](notebooks/helpers/) / 실행 패키지: [`requirements.txt`](requirements.txt)
-- 대표 결과: [변수 중요도](assets/feature_importance.png) · [학습곡선](assets/learning_curve.png) · [SHAP 요약](assets/shap_summary.png)
-- 동봉 폰트: Noto Sans KR — [SIL Open Font License](notebooks/helpers/fonts/OFL.txt)
-
-<details>
-<summary>실행 방법</summary>
-
-Python 3.13 환경에서 프로젝트 폴더를 기준으로 실행한다.
-
-```bash
-python -m pip install -r requirements.txt
-cd notebooks
-jupyter lab
-```
-
-01~05번을 순서대로 실행한다. `helpers`는 노트북과 같은 폴더에 있다. 04번은 `ml_models/<실행시각>`와 `<실행시각>_tuned`에 모델을 저장하고, 05번은 최신 튜닝 폴더를 읽어 `<실행시각>_importance`에 최종 모델을 저장한다. CatBoost 튜닝과 학습곡선 계산에는 시간이 걸릴 수 있다.
-
-</details>
+- 공개 파일: 이 README와 단일 분석 노트북. 코드·표·그래프·해석은 노트북에 함께 수록한다.
+- 데이터 품질 점검 → EDA → 전처리 → 모델링 → 최종 진단·해석 순서로 구성했다.
+- 각 단계에서 실행·저장한 결과를 통합했으며, 코드와 출력은 보존했다. 실행 번호는 단계별 기록이며 통합 파일의 전체 재실행 기록은 아니다.
+- 저장된 결과의 열람에는 별도 파일이 필요하지 않다. **재실행에는 Python 3.13, 별도로 보유한 `helpers`, `jussam` 및 관련 분석 패키지가 필요하다.** 이 저장소만으로 실행 환경이 완결되지는 않는다.
+- `helpers`, 별도 그래프 파일, 전체 데이터, 학습 모델, 환경 파일은 공개 프로젝트에 포함하지 않는다.
 
 ## 회고
 
