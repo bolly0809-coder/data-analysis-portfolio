@@ -130,6 +130,17 @@ Cookie Cats A/B 테스트, Google Play 리뷰, 보조 UA 캠페인 데이터를 
 
 ---
 
+### 11. 중량과 품질 등급으로 다이아몬드 가격을 설명할 수 있는가
+
+다이아몬드 53,794개 관측치에 대해 품질 점검·EDA와 9개 선형회귀 모형 비교를 수행하고, 도메인 변수 선택 및 전처리의 차이를 분석했습니다.
+
+- 최종 18개 회귀항, 표본 내 RMSE 796.879달러·원본 척도 R² 약 0.960
+- 기계적 전처리 최고 모형 대비 변수 3개 감소·RMSE 약 4.22% 감소
+- 코드·실행 결과를 단일 노트북에 수록하고 가정 위반·평가 한계를 명시
+- 분석 요약 · 핵심 결과 · 참고자료 · 회고: [`diamonds-price-analysis`](./diamonds-price-analysis)
+
+---
+
 ## Skill Evidence
 
 ### SQL Practice
@@ -163,6 +174,7 @@ SQL 기반 데이터 추출·집계 역량을 보여주기 위해 구성한 보�
 ├── ai-agent-response-evaluation/
 ├── pocari-consumer-reaction-analysis/
 ├── california-housing-price-prediction/
+├── diamonds-price-analysis/
 ├── sql-practice/
 └── pandas-preprocessing-cases/
 ```
