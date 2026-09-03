@@ -174,6 +174,17 @@ Mall Customers 고객 200명의 연수입·지출점수를 표준화하여 5개 
 
 ---
 
+### 15. 사과 품질 분류와 품질 관련 요인 분석
+
+사과 4,000건의 품질을 대상으로 품질 점검·EDA, 로짓 선형성 진단, 8개 로지스틱 회귀 모형 비교와 임계값 분석을 수행했습니다.
+
+- 최종 가정 반영 모형: 원변수 7개·설명항 13개, 표본 내 정확도 79.18%·F1 0.795·ROC-AUC 0.868
+- 단독 비교에서 드러나지 않았던 Crunchiness의 곡선 관계와 계층 원칙에 따른 모형 선택 근거 정리
+- 임계값별 FP·FN의 교환관계, 표본 내 평가와 인과·실무 적용의 한계를 명시
+- 분석 요약 · 핵심 결과 · 참고자료 · 회고: [`apple-quality-classification`](./apple-quality-classification)
+
+---
+
 ## Skill Evidence
 
 ### SQL Practice
@@ -211,6 +222,7 @@ SQL 기반 데이터 추출·집계 역량을 보여주기 위해 구성한 보�
 ├── mall-customers-segmentation/
 ├── insurance-cost-analysis/
 ├── boston-housing-analysis/
+├── apple-quality-classification/
 ├── sql-practice/
 └── pandas-preprocessing-cases/
 ```
