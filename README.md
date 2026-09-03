@@ -152,6 +152,28 @@ Mall Customers 고객 200명의 연수입·지출점수를 표준화하여 5개 
 
 ---
 
+### 13. 의료보험 청구비용은 어떤 특성과 관련되는가
+
+의료보험 비용 데이터 1,337건에 대해 품질 점검·EDA와 다섯 선형회귀 모형 비교를 수행하고, 개인 특성과 청구비용의 조건부 관계를 분석했습니다.
+
+- 최종 기준선 모형: 독립변수 4개, 표본 내 R² 0.750·RMSE 6,058.642달러
+- 로그변환의 분포 개선과 원본 금액 단위의 예측 오차 개선을 구분
+- 흡연 여부·나이·BMI·자녀 수의 계수, HC3 진단 및 인과·실무 적용 한계를 정리
+- 분석 요약 · 핵심 결과 · 참고자료 · 회고: [`insurance-cost-analysis`](./insurance-cost-analysis)
+
+---
+
+### 14. 지역 특성으로 보스턴 주택가격을 설명할 수 있는가
+
+보스턴 지역 506개 관측치에 대해 품질 점검·EDA와 전처리 체크포인트별 선형회귀 모형 비교를 수행했습니다.
+
+- 최종 로그변환 모형: 독립변수 10개, 표본 내 원본 척도 R² 0.777·RMSE 4.336천 달러
+- 기준선 대비 변수 1개 감소·RMSE 약 7.35% 감소
+- 단독 상관과 조건부 회귀계수의 부호 차이, 가격 상한·잔차 진단·지역 단위 해석의 한계 정리
+- 분석 요약 · 핵심 결과 · 참고자료 · 회고: [`boston-housing-analysis`](./boston-housing-analysis)
+
+---
+
 ## Skill Evidence
 
 ### SQL Practice
@@ -187,6 +209,8 @@ SQL 기반 데이터 추출·집계 역량을 보여주기 위해 구성한 보�
 ├── california-housing-price-prediction/
 ├── diamonds-price-analysis/
 ├── mall-customers-segmentation/
+├── insurance-cost-analysis/
+├── boston-housing-analysis/
 ├── sql-practice/
 └── pandas-preprocessing-cases/
 ```
