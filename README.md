@@ -185,6 +185,17 @@ Mall Customers 고객 200명의 연수입·지출점수를 표준화하여 5개 
 
 ---
 
+### 16. 승객 특성으로 타이타닉 생존을 예측하고 예측 근거를 설명할 수 있는가
+
+공개 정답이 있는 승객 891명을 대상으로 품질 점검·EDA, 11개 분류모형 비교와 튜닝, RandomForest 변수 축소 및 SHAP 해석을 수행했습니다.
+
+- 내부 검증 179건에서 튜닝 KNN이 F1 0.773·정확도 83.2%로 비교표 1위
+- KNN과 RandomForest의 분류·확률 지표 차이, 변수 축소에 따른 성능 하락을 구분하여 해석
+- 호칭·등급·요금·연령·객실 정보 기록 유무의 예측 기여와 결측·반복 검증·인과 해석의 한계를 명시
+- 분석 요약 · 핵심 결과 · 참고자료: [`titanic-survival-analysis`](./titanic-survival-analysis)
+
+---
+
 ## Skill Evidence
 
 ### SQL Practice
@@ -223,6 +234,7 @@ SQL 기반 데이터 추출·집계 역량을 보여주기 위해 구성한 보�
 ├── insurance-cost-analysis/
 ├── boston-housing-analysis/
 ├── apple-quality-classification/
+├── titanic-survival-analysis/
 ├── sql-practice/
 └── pandas-preprocessing-cases/
 ```
