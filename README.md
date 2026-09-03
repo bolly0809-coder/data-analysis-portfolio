@@ -18,19 +18,7 @@ SQL, Python/pandas, 텍스트 분석, 공공데이터 결합, 지표 설계, 시
 
 ## Projects
 
-### 1. Self-mall Funnel Conversion Analysis
-
-패션/스니커즈 자사몰을 가정한 샘플 행동 로그 데이터를 생성하고, 고객 여정 퍼널·마케팅 채널 성과·재구매/LTV·A/B 테스트·UX 개선 우선순위를 분석한 프로젝트입니다.
-
-- GA4식 이벤트 구조를 참고해 session, event, order, campaign 테이블 설계
-- 방문 → 상품조회 → 장바구니 → 결제시작 → 구매 단계별 전환율과 이탈률 분석
-- 채널별 CTR, CVR, ROAS, CPA 비교 및 예산 확대/점검 후보 도출
-- 사이즈 가이드, 포토리뷰, 모바일 결제, ACC 동반구매 기반 UX/CRM 액션 제안
-- Repository: [`selfmall-funnel-conversion-analysis`](./selfmall-funnel-conversion-analysis)
-
----
-
-### 2. Job Review & Posting Analysis
+### 1. Job Review & Posting Analysis
 
 기업 리뷰 텍스트를 전처리·분석·점수화하고, 채용공고 데이터와 결합해 구직자의 지원 판단을 돕는 데이터 기반 취업 지원 서비스 프로젝트입니다.
 
@@ -41,7 +29,7 @@ SQL, Python/pandas, 텍스트 분석, 공공데이터 결합, 지표 설계, 시
 
 ---
 
-### 3. Seoul Isolation Risk Analysis
+### 2. Seoul Isolation Risk Analysis
 
 서울시 행정동 단위 공공데이터와 서울 빅데이터캠퍼스의 생활인구·생활이동 데이터를 결합해 생애주기별 사회적 고립 위험지역을 분석한 프로젝트입니다.
 
@@ -52,7 +40,7 @@ SQL, Python/pandas, 텍스트 분석, 공공데이터 결합, 지표 설계, 시
 
 ---
 
-### 4. Ecommerce Ranking Analysis
+### 3. Ecommerce Ranking Analysis
 
 쿠팡·네이버쇼핑 건강식품 랭킹 상품 데이터를 수집해 가격, 리뷰 수, 평점, 상품명 소구 키워드, 랭킹 기준별 상품 구성 차이를 분석한 프로젝트입니다.
 
@@ -63,7 +51,7 @@ SQL, Python/pandas, 텍스트 분석, 공공데이터 결합, 지표 설계, 시
 
 ---
 
-### 5. Olist Ecommerce Analysis
+### 4. Olist Ecommerce Analysis
 
 Olist 공개 이커머스 주문·결제·배송·리뷰 데이터를 SQLite에 적재하고, SQL 기반으로 월별 KPI, 카테고리별 매출 기여도, 배송 지연율과 리뷰 점수 차이를 분석한 프로젝트입니다.
 
@@ -74,7 +62,7 @@ Olist 공개 이커머스 주문·결제·배송·리뷰 데이터를 SQLite에 
 
 ---
 
-### 6. Supply Chain Delay Risk Scoring
+### 5. Supply Chain Delay Risk Scoring
 
 공급망 주문 데이터를 활용해 배송 지연 가능성을 예측하고, 주문별 리스크 스코어를 산출한 프로젝트입니다.
 
@@ -86,18 +74,7 @@ Olist 공개 이커머스 주문·결제·배송·리뷰 데이터를 SQLite에 
 
 ---
 
-### 7. Mobile Game Retention Review UA Analysis
-
-Cookie Cats A/B 테스트, Google Play 리뷰, 보조 UA 캠페인 데이터를 활용해 모바일 게임의 리텐션 변화, UX 신호, UA 성과 판단 구조를 분석한 프로젝트입니다.
-
-- A/B 테스트 기반 D1·D7 Retention 차이 검정
-- Google Play 리뷰 수집 및 UX 리스크 신호 분류
-- 캠페인 KPI, D7 ROAS, 예측 오차 분석
-- Repository: [`mobile-game-retention-review-ua-analysis`](./mobile-game-retention-review-ua-analysis)
-
----
-
-### 8. AI Agent Response Evaluation
+### 6. AI Agent Response Evaluation
 
 한국어 AI 에이전트 응답 90건을 평가해 지시 준수, 근거성, 맥락 이해, 안전성 오류를 라벨링하고 실패 패턴을 분석한 프로젝트입니다.
 
@@ -108,7 +85,7 @@ Cookie Cats A/B 테스트, Google Play 리뷰, 보조 UA 캠페인 데이터를 
 
 ---
 
-### 9. Pocari Consumer Reaction Analysis
+### 7. Pocari Consumer Reaction Analysis
 
 포카리스웨트 관련 네이버 블로그 공개 검색 데이터와 일부 상세 본문을 수집해 사용 맥락, 제품 반응, CX/마케팅 신호를 분류한 프로젝트입니다.
 
@@ -119,7 +96,7 @@ Cookie Cats A/B 테스트, Google Play 리뷰, 보조 UA 캠페인 데이터를 
 
 ---
 
-### 10. 소득과 입지, 주거 구조로 캘리포니아 주택가격을 예측할 수 있는가
+### 8. 소득과 입지, 주거 구조로 캘리포니아 주택가격을 예측할 수 있는가
 
 캘리포니아 인구조사 구역의 주택 중위가격을 대상으로 데이터 품질 점검, EDA, 파생변수 설계, 11개 회귀모형 비교, 최종 CatBoost 평가와 SHAP 해석을 수행했습니다.
 
@@ -130,7 +107,7 @@ Cookie Cats A/B 테스트, Google Play 리뷰, 보조 UA 캠페인 데이터를 
 
 ---
 
-### 11. 중량과 품질 등급으로 다이아몬드 가격을 설명할 수 있는가
+### 9. 중량과 품질 등급으로 다이아몬드 가격을 설명할 수 있는가
 
 다이아몬드 53,794개 관측치에 대해 품질 점검·EDA와 9개 선형회귀 모형 비교를 수행하고, 도메인 변수 선택 및 전처리의 차이를 분석했습니다.
 
@@ -141,7 +118,7 @@ Cookie Cats A/B 테스트, Google Play 리뷰, 보조 UA 캠페인 데이터를 
 
 ---
 
-### 12. 연수입과 지출점수로 고객을 나누면 어떤 고객군이 보이는가
+### 10. 연수입과 지출점수로 고객을 나누면 어떤 고객군이 보이는가
 
 Mall Customers 고객 200명의 연수입·지출점수를 표준화하여 5개 군집을 구성하고, 군집별 특성과 경계 사례를 진단했습니다.
 
@@ -152,7 +129,7 @@ Mall Customers 고객 200명의 연수입·지출점수를 표준화하여 5개 
 
 ---
 
-### 13. 의료보험 청구비용은 어떤 특성과 관련되는가
+### 11. 의료보험 청구비용은 어떤 특성과 관련되는가
 
 의료보험 비용 데이터 1,337건에 대해 품질 점검·EDA와 다섯 선형회귀 모형 비교를 수행하고, 개인 특성과 청구비용의 조건부 관계를 분석했습니다.
 
@@ -163,7 +140,7 @@ Mall Customers 고객 200명의 연수입·지출점수를 표준화하여 5개 
 
 ---
 
-### 14. 지역 특성으로 보스턴 주택가격을 설명할 수 있는가
+### 12. 지역 특성으로 보스턴 주택가격을 설명할 수 있는가
 
 보스턴 지역 506개 관측치에 대해 품질 점검·EDA와 전처리 체크포인트별 선형회귀 모형 비교를 수행했습니다.
 
@@ -174,7 +151,7 @@ Mall Customers 고객 200명의 연수입·지출점수를 표준화하여 5개 
 
 ---
 
-### 15. 사과 품질 분류와 품질 관련 요인 분석
+### 13. 사과 품질 분류와 품질 관련 요인 분석
 
 사과 4,000건의 품질을 대상으로 품질 점검·EDA, 로짓 선형성 진단, 8개 로지스틱 회귀 모형 비교와 임계값 분석을 수행했습니다.
 
@@ -185,7 +162,7 @@ Mall Customers 고객 200명의 연수입·지출점수를 표준화하여 5개 
 
 ---
 
-### 16. 승객 특성으로 타이타닉 생존을 예측하고 예측 근거를 설명할 수 있는가
+### 14. 승객 특성으로 타이타닉 생존을 예측하고 예측 근거를 설명할 수 있는가
 
 공개 정답이 있는 승객 891명을 대상으로 품질 점검·EDA, 11개 분류모형 비교와 튜닝, RandomForest 변수 축소 및 SHAP 해석을 수행했습니다.
 
@@ -219,13 +196,11 @@ SQL 기반 데이터 추출·집계 역량을 보여주기 위해 구성한 보�
 ```text
 .
 ├── README.md
-├── selfmall-funnel-conversion-analysis/
 ├── job-review-analysis/
 ├── seoul-isolation-risk-analysis/
 ├── ecommerce-ranking-analysis/
 ├── olist-ecommerce-analysis/
 ├── supply-chain-delay-risk-scoring/
-├── mobile-game-retention-review-ua-analysis/
 ├── ai-agent-response-evaluation/
 ├── pocari-consumer-reaction-analysis/
 ├── california-housing-price-prediction/
