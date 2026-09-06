@@ -1,231 +1,153 @@
-# Data Analysis Portfolio
+<!-- 프로필 사진을 추가할 때 아래 주석을 해제하세요.
+<p align="center">
+  <img src="./assets/profile.jpg" width="180" alt="Profile Photo">
+</p>
+-->
 
-데이터 분석가 포트폴리오 저장소입니다.
+<h1 align="center">배 지 환 &nbsp;|&nbsp; BAE, JI HWAN</h1>
 
-SQL, Python/pandas, 텍스트 분석, 공공데이터 결합, 지표 설계, 시각화, 리포팅 프로젝트를 중심으로 정리했습니다. 각 프로젝트는 문제 정의, 사용 데이터, 분석 과정, 주요 결과, 한계 및 개선 방향을 확인할 수 있도록 구성했습니다.
+<h3 align="center">Data Analyst</h3>
 
----
+<p align="center">
+  SQL · Python · Statistical Modeling · Machine Learning · Data Visualization
+</p>
 
-## Portfolio Direction
+<p align="center">
+  <img src="https://img.shields.io/badge/Certification-ADsP-0A66C2?style=flat-square" alt="ADsP">
+  <img src="https://img.shields.io/badge/Education-Dongguk%20University-8B0029?style=flat-square" alt="Dongguk University">
+  <img src="https://img.shields.io/badge/Training-ITWILL%20Data%20Analysis-34568B?style=flat-square" alt="ITWILL Data Analysis">
+  <a href="mailto:bolly0809@gmail.com"><img src="https://img.shields.io/badge/Email-bolly0809%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email"></a>
+  <a href="https://app.notion.com/p/36eb1b26b8cc81e69a2ed576a6333f6d"><img src="https://img.shields.io/badge/Portfolio-Notion-000000?style=flat-square&logo=notion&logoColor=white" alt="Notion"></a>
+</p>
 
-| 구분 | 내용 |
+여러 테이블과 출처의 데이터를 분석 가능한 구조로 정리하고, 검증 가능한 지표·예측·시각화로 연결해 사용자의 판단을 돕는 **신입 데이터 분석가**입니다. 분석 단위와 시점을 먼저 정의하고, 중복 집계와 데이터 누수를 점검한 뒤 결과의 활용 범위까지 설명하는 것을 중요하게 생각합니다.
+
+## 🧭 한눈에 보기
+
+| 항목 | 내용 |
 |---|---|
-| 지원 직무 | 데이터 분석가, 비즈니스 데이터 분석, 서비스/Product 데이터 분석, 자사몰/마케팅 데이터 분석 |
-| 관심 도메인 | 커머스, 플랫폼 서비스, 광고·마케팅 성과 분석, 에듀테크, 공공데이터 분석 |
-| 핵심 역량 | SQL, Python, pandas, 지표 설계, 퍼널/코호트 분석, 텍스트마이닝, 시각화, 리포팅 |
-
----
-
-## Projects
-
-### 1. Job Review & Posting Analysis
-
-기업 리뷰 텍스트를 전처리·분석·점수화하고, 채용공고 데이터와 결합해 구직자의 지원 판단을 돕는 데이터 기반 취업 지원 서비스 프로젝트입니다.
-
-- 비정형 리뷰 텍스트를 카테고리별 정량 지표로 변환
-- 채용공고 점수와 리뷰 점수를 결합한 통합 분석 테이블 구축
-- 추천·진단 서비스에 활용 가능한 데이터 구조 설계
-- Repository: [`job-review-analysis`](./job-review-analysis)
-
----
-
-### 2. Seoul Isolation Risk Analysis
-
-서울시 행정동 단위 공공데이터와 서울 빅데이터캠퍼스의 생활인구·생활이동 데이터를 결합해 생애주기별 사회적 고립 위험지역을 분석한 프로젝트입니다.
-
-- 여러 출처의 데이터를 행정동 단위로 정합화
-- 청년·중장년·노년별 복합위험지수 설계
-- 분석 결과를 지도 시각화, 정책 카드, 보고서로 연결
-- Repository: [`seoul-isolation-risk-analysis`](./seoul-isolation-risk-analysis)
-
----
-
-### 3. Ecommerce Ranking Analysis
-
-쿠팡·네이버쇼핑 건강식품 랭킹 상품 데이터를 수집해 가격, 리뷰 수, 평점, 상품명 소구 키워드, 랭킹 기준별 상품 구성 차이를 분석한 프로젝트입니다.
-
-- 이커머스 상품 데이터를 분석 가능한 테이블로 구조화
-- 가격·리뷰 수·평점·상품명 키워드 비교
-- 플랫폼별 랭킹 기준과 상품 소구 방식 차이 해석
-- Repository: [`ecommerce-ranking-analysis`](./ecommerce-ranking-analysis)
-
----
-
-### 4. Olist Ecommerce Analysis
-
-Olist 공개 이커머스 주문·결제·배송·리뷰 데이터를 SQLite에 적재하고, SQL 기반으로 월별 KPI, 카테고리별 매출 기여도, 배송 지연율과 리뷰 점수 차이를 분석한 프로젝트입니다.
-
-- SQLite 기반 다중 테이블 JOIN, GROUP BY, CTE, Window Function 활용
-- 주문 단위와 상품 단위 base table 분리
-- 배송 지연율과 리뷰 점수의 관계를 고객 경험 관점에서 해석
-- Repository: [`olist-ecommerce-analysis`](./olist-ecommerce-analysis)
-
----
-
-### 5. Supply Chain Delay Risk Scoring
-
-공급망 주문 데이터를 활용해 배송 지연 가능성을 예측하고, 주문별 리스크 스코어를 산출한 프로젝트입니다.
-
-- 배송 완료 후에야 알 수 있는 누수 변수를 제거하고 모델링
-- Logistic Regression과 XGBoost 성능 비교
-- 예측 확률을 0~100점 리스크 스코어로 변환
-- Streamlit 대시보드로 고위험 주문 점검 화면 구성
-- Repository: [`supply-chain-delay-risk-scoring`](./supply-chain-delay-risk-scoring)
-
----
-
-### 6. AI Agent Response Evaluation
-
-한국어 AI 에이전트 응답 90건을 평가해 지시 준수, 근거성, 맥락 이해, 안전성 오류를 라벨링하고 실패 패턴을 분석한 프로젝트입니다.
-
-- 한국어 AI 응답 평가용 프롬프트 설계
-- 오류 유형 라벨링 및 대표 사례 분석
-- 환불·책임·AI 추천·데이터 해석 맥락의 위험 표현 개선
-- Repository: [`ai-agent-response-evaluation`](./ai-agent-response-evaluation)
-
----
-
-### 7. Pocari Consumer Reaction Analysis
-
-포카리스웨트 관련 네이버 블로그 공개 검색 데이터와 일부 상세 본문을 수집해 사용 맥락, 제품 반응, CX/마케팅 신호를 분류한 프로젝트입니다.
-
-- Selenium·BeautifulSoup 기반 공개 검색 데이터 수집
-- 검색결과 카드 566건과 상세 본문 샘플 150건 수집
-- 제품 타입 재분류 및 사전 기반 다중 라벨링
-- Repository: [`pocari-consumer-reaction-analysis`](./pocari-consumer-reaction-analysis)
-
----
-
-### 8. 소득과 입지, 주거 구조로 캘리포니아 주택가격을 예측할 수 있는가
-
-캘리포니아 인구조사 구역의 주택 중위가격을 대상으로 데이터 품질 점검, EDA, 파생변수 설계, 11개 회귀모형 비교, 최종 CatBoost 평가와 SHAP 해석을 수행했습니다.
-
-- 데이터 품질 → EDA → 전처리 → 모델링 → 해석을 실행 결과가 포함된 단일 노트북으로 구성
-- 최종 평가 R² 약 0.785, RMSE 0.2659(로그 척도)
-- 소득·입지·주거 구조 변수의 예측 기여도와 과적합·공간분석 한계 정리
-- 분석 요약 · 핵심 결과 · 참고자료 · 회고: [`california-housing-price-prediction`](./california-housing-price-prediction)
-
----
-
-### 9. 중량과 품질 등급으로 다이아몬드 가격을 설명할 수 있는가
-
-다이아몬드 53,794개 관측치에 대해 품질 점검·EDA와 9개 선형회귀 모형 비교를 수행하고, 도메인 변수 선택 및 전처리의 차이를 분석했습니다.
-
-- 최종 18개 회귀항, 표본 내 RMSE 796.879달러·원본 척도 R² 약 0.960
-- 기계적 전처리 최고 모형 대비 변수 3개 감소·RMSE 약 4.22% 감소
-- 코드·실행 결과를 단일 노트북에 수록하고 가정 위반·평가 한계를 명시
-- 분석 요약 · 핵심 결과 · 참고자료 · 회고: [`diamonds-price-analysis`](./diamonds-price-analysis)
-
----
-
-### 10. 연수입과 지출점수로 고객을 나누면 어떤 고객군이 보이는가
-
-Mall Customers 고객 200명의 연수입·지출점수를 표준화하여 5개 군집을 구성하고, 군집별 특성과 경계 사례를 진단했습니다.
-
-- 엘보우·실루엣·균형지수 비교: k=5 실루엣 약 0.555 / k=2 약 0.315
-- 실루엣 0.1 이하 경계 검토 고객 6명(3.0%), 그중 음수 고객 2명 확인
-- k=2·k=5 배정 비교, 나이·성별 페르소나, 활용 가설·실험 계획을 실행 결과와 구분하여 정리
-- 분석 요약 · 핵심 결과 · 참고자료 · 회고: [`mall-customers-segmentation`](./mall-customers-segmentation)
-
----
-
-### 11. 의료보험 청구비용은 어떤 특성과 관련되는가
-
-의료보험 비용 데이터 1,337건에 대해 품질 점검·EDA와 다섯 선형회귀 모형 비교를 수행하고, 개인 특성과 청구비용의 조건부 관계를 분석했습니다.
-
-- 최종 기준선 모형: 독립변수 4개, 표본 내 R² 0.750·RMSE 6,058.642달러
-- 로그변환의 분포 개선과 원본 금액 단위의 예측 오차 개선을 구분
-- 흡연 여부·나이·BMI·자녀 수의 계수, HC3 진단 및 인과·실무 적용 한계를 정리
-- 분석 요약 · 핵심 결과 · 참고자료 · 회고: [`insurance-cost-analysis`](./insurance-cost-analysis)
-
----
-
-### 12. 지역 특성으로 보스턴 주택가격을 설명할 수 있는가
-
-보스턴 지역 506개 관측치에 대해 품질 점검·EDA와 전처리 체크포인트별 선형회귀 모형 비교를 수행했습니다.
-
-- 최종 로그변환 모형: 독립변수 10개, 표본 내 원본 척도 R² 0.777·RMSE 4.336천 달러
-- 기준선 대비 변수 1개 감소·RMSE 약 7.35% 감소
-- 단독 상관과 조건부 회귀계수의 부호 차이, 가격 상한·잔차 진단·지역 단위 해석의 한계 정리
-- 분석 요약 · 핵심 결과 · 참고자료 · 회고: [`boston-housing-analysis`](./boston-housing-analysis)
-
----
-
-### 13. 사과 품질 분류와 품질 관련 요인 분석
-
-사과 4,000건의 품질을 대상으로 품질 점검·EDA, 로짓 선형성 진단, 8개 로지스틱 회귀 모형 비교와 임계값 분석을 수행했습니다.
-
-- 최종 가정 반영 모형: 원변수 7개·설명항 13개, 표본 내 정확도 79.18%·F1 0.795·ROC-AUC 0.868
-- 단독 비교에서 드러나지 않았던 Crunchiness의 곡선 관계와 계층 원칙에 따른 모형 선택 근거 정리
-- 임계값별 FP·FN의 교환관계, 표본 내 평가와 인과·실무 적용의 한계를 명시
-- 분석 요약 · 핵심 결과 · 참고자료 · 회고: [`apple-quality-classification`](./apple-quality-classification)
-
----
-
-### 14. 승객 특성으로 타이타닉 생존을 예측하고 예측 근거를 설명할 수 있는가
-
-공개 정답이 있는 승객 891명을 대상으로 품질 점검·EDA, 11개 분류모형 비교와 튜닝, RandomForest 변수 축소 및 SHAP 해석을 수행했습니다.
-
-- 내부 검증 179건에서 튜닝 KNN이 F1 0.773·정확도 83.2%로 비교표 1위
-- KNN과 RandomForest의 분류·확률 지표 차이, 변수 축소에 따른 성능 하락을 구분하여 해석
-- 호칭·등급·요금·연령·객실 정보 기록 유무의 예측 기여와 결측·반복 검증·인과 해석의 한계를 명시
-- 분석 요약 · 핵심 결과 · 참고자료: [`titanic-survival-analysis`](./titanic-survival-analysis)
-
----
-
-## Skill Evidence
-
-### SQL Practice
-
-SQL 기반 데이터 추출·집계 역량을 보여주기 위해 구성한 보강 자료입니다. Olist 이커머스 데이터로 JOIN, GROUP BY, CTE, Window Function, KPI 집계를 수행했고, synthetic dataset으로 퍼널 전환율, 코호트 리텐션, 세그먼트 분석, A/B 테스트 결과 집계 SQL을 정리했습니다.
-
-- Repository: [`sql-practice`](./sql-practice)
-
----
-
-### Pandas Preprocessing Cases
-
-실제 프로젝트 데이터 기반으로 Python/pandas 전처리 흐름을 정리한 보강 자료입니다. 이커머스 랭킹 상품 데이터 정제, Olist base table 설계, 리뷰 텍스트 사전 매핑, 전처리 결과 검증 과정을 포함합니다.
-
-- Repository: [`pandas-preprocessing-cases`](./pandas-preprocessing-cases)
-
----
-
-## Repository Structure
-
-```text
-.
-├── README.md
-├── job-review-analysis/
-├── seoul-isolation-risk-analysis/
-├── ecommerce-ranking-analysis/
-├── olist-ecommerce-analysis/
-├── supply-chain-delay-risk-scoring/
-├── ai-agent-response-evaluation/
-├── pocari-consumer-reaction-analysis/
-├── california-housing-price-prediction/
-├── diamonds-price-analysis/
-├── mall-customers-segmentation/
-├── insurance-cost-analysis/
-├── boston-housing-analysis/
-├── apple-quality-classification/
-├── titanic-survival-analysis/
-├── sql-practice/
-└── pandas-preprocessing-cases/
-```
-
----
-
-## Data Disclosure
-
-본 저장소에는 공개 가능한 범위의 분석 코드, 요약 산출물, 시각화 자료, README 문서를 중심으로 정리했습니다.
-
-다음 자료는 공개 저장소에 포함하지 않는 것을 원칙으로 합니다.
-
-- 크롤링 원문 데이터
-- 기업 리뷰 원문 및 원문이 포함된 중간 산출물
-- 서울 빅데이터캠퍼스 반출 원본 데이터
-- 대용량 SQLite DB 및 원본 Kaggle CSV
-- 모델 바이너리와 로컬 환경 파일
-
-공개 데이터셋을 활용한 프로젝트도 원본 전체 파일 대신 분석 흐름과 요약 결과를 중심으로 관리합니다.
+| 지원 직무 | 데이터 분석 · 비즈니스/서비스 데이터 분석 · 데이터 분석 운영 |
+| 학력 | 동국대학교 국어국문문예창작학부 학사 |
+| 교육 | 아이티윌 머신러닝 활용 데이터 분석 부트캠프 |
+| 자격 | ADsP 데이터분석 준전문가 |
+| 실무 경험 | 쿠팡 Creative Studio 광고 에디터 · 공공기관 사무 및 민원 응대 · 초중고 국어 과외 |
+| 관심 도메인 | 에듀테크·입시 · 커머스·플랫폼 · 광고·마케팅 · 공공데이터 |
+| 작업 기준 | 문제 정의 → 데이터 품질 점검 → 분석 테이블 설계 → 모델링·검증 → 해석·활용 제안 |
+
+## 🎯 핵심 역량 Core Competencies
+
+경력의 길이보다 프로젝트에서 직접 수행하고 설명할 수 있는 분석 과정과 결과를 기준으로 정리했습니다.
+
+| # | 영역 | 경험 근거 | 핵심 역량 |
+|---:|---|---|---|
+| 1 | **Data Preparation & SQL** | Olist 9개 테이블 SQL 분석 | JOIN·CTE·Window Function, 분석 단위별 base table 설계, 중복 집계 방지 |
+| 2 | **Statistical Modeling & Machine Learning** | 회귀·분류·군집 프로젝트 | 학습·검증 분리, 데이터 누수 점검, 모델 비교, 오차 및 일반화 성능 진단 |
+| 3 | **Metric Design & Decision Support** | 사회적 고립 위험지수·공급망 리스크 스코어 | 다출처 지표 정합화, 가중 결합, 점수 환산, 우선순위 기준 설계 |
+| 4 | **Text Data & Collection** | 기업 리뷰·이커머스 랭킹·소비자 반응 분석 | Selenium·BeautifulSoup 수집, 텍스트 정제, 사전 기반 분류·감성 신호 점수화 |
+| 5 | **Communication & Domain Understanding** | 콘텐츠 품질관리·국어 과외·민원 응대 | 분석 기준 문서화, 사용자 관점 설명, 결과를 보고서·대시보드·운영안으로 전달 |
+
+## 🔎 관심 분석 영역
+
+- 🎓 **Education & Admission Data** — 성적·전형·지원 데이터를 정확한 산출 기준과 예측 결과로 연결
+- 🛒 **E-commerce & Platform Operations** — 주문·결제·배송·리뷰 데이터를 활용한 운영 지표와 고객경험 분석
+- 📈 **Marketing & Product Analytics** — 캠페인 KPI, 리텐션, 실험 결과를 기반으로 개선 우선순위 도출
+- 🏙️ **Public Data Analysis** — 서로 다른 공공데이터를 지역 단위로 정합화해 정책 우선순위 설계
+
+## 🧪 Methodological Keywords
+
+<p>
+  <img src="https://img.shields.io/badge/SQL-Relational%20Analysis-336791?style=flat-square&logo=sqlite&logoColor=white" alt="SQL">
+  <img src="https://img.shields.io/badge/Python-Data%20Analysis-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/Machine%20Learning-Model%20Evaluation-F7931E?style=flat-square" alt="Machine Learning">
+  <img src="https://img.shields.io/badge/Statistics-Hypothesis%20Testing-4C78A8?style=flat-square" alt="Statistics">
+  <img src="https://img.shields.io/badge/Text%20Mining-Signal%20Scoring-7A5195?style=flat-square" alt="Text Mining">
+  <img src="https://img.shields.io/badge/Data%20Quality-Validation-2A9D8F?style=flat-square" alt="Data Quality">
+</p>
+
+| # | 키워드 | 세부 |
+|---:|---|---|
+| 01 | SQL & Relational Data Modeling | 다중 테이블 결합 · CTE · Window Function · 분석 단위별 base table |
+| 02 | Data Quality & Preprocessing | 결측·중복·이상치 점검 · 스키마 정합화 · 검증 절차 |
+| 03 | Statistical Modeling | 선형·로지스틱 회귀 · 가설검정 · 잔차 및 가정 진단 |
+| 04 | Machine Learning Evaluation | 분류·회귀·군집 · 시간순 검증 · 임계값과 오차 해석 |
+| 05 | Metric & Score Design | KPI · 복합지수 · 위험점수 · 우선순위 산출식 |
+| 06 | Text Mining & Data Collection | 웹 수집 자동화 · 텍스트 정제 · 사전 기반 분류·감성분석 |
+
+## 🚀 Growth Focus
+
+1. 교육·입시 데이터의 산출 기준과 예측 결과를 사용자의 지원 판단으로 연결하는 분석
+2. 시간에 따라 변하는 서비스 지표를 검증하는 시계열·코호트·실험 분석
+3. 반복되는 수집·검증·리포팅 업무를 재현 가능한 분석 파이프라인으로 자동화
+
+## 🛠️ Technology Stack
+
+### Database & Query
+
+<p>
+  <img src="https://img.shields.io/badge/SQL-336791?style=flat-square&logo=postgresql&logoColor=white" alt="SQL">
+  <img src="https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white" alt="SQLite">
+</p>
+
+### Analysis & Modeling
+
+<p>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/pandas-150458?style=flat-square&logo=pandas&logoColor=white" alt="pandas">
+  <img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white" alt="NumPy">
+  <img src="https://img.shields.io/badge/SciPy-8CAAE6?style=flat-square&logo=scipy&logoColor=white" alt="SciPy">
+  <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" alt="scikit-learn">
+  <img src="https://img.shields.io/badge/XGBoost-EB5B28?style=flat-square" alt="XGBoost">
+  <img src="https://img.shields.io/badge/LightGBM-02569B?style=flat-square" alt="LightGBM">
+  <img src="https://img.shields.io/badge/statsmodels-4051B5?style=flat-square" alt="statsmodels">
+  <img src="https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white" alt="R">
+</p>
+
+### Visualization & Delivery
+
+<p>
+  <img src="https://img.shields.io/badge/Matplotlib-11557C?style=flat-square" alt="Matplotlib">
+  <img src="https://img.shields.io/badge/Seaborn-4C72B0?style=flat-square" alt="Seaborn">
+  <img src="https://img.shields.io/badge/Power%20BI-F2C811?style=flat-square&logo=powerbi&logoColor=black" alt="Power BI">
+  <img src="https://img.shields.io/badge/Excel-217346?style=flat-square&logo=microsoftexcel&logoColor=white" alt="Excel">
+  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white" alt="Streamlit">
+  <img src="https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white" alt="Jupyter">
+</p>
+
+### Collection & Collaboration
+
+<p>
+  <img src="https://img.shields.io/badge/Selenium-43B02A?style=flat-square&logo=selenium&logoColor=white" alt="Selenium">
+  <img src="https://img.shields.io/badge/BeautifulSoup-59666C?style=flat-square" alt="BeautifulSoup">
+  <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub">
+</p>
+
+## 📂 포트폴리오 구성
+
+각 프로젝트는 **문제 정의 → 품질 점검 → EDA → 전처리·모델링 → 평가·진단 → 결과 해석**의 흐름으로 구성했습니다. 성능 수치만 제시하지 않고 사용한 기준, 오류 가능성, 해석 범위와 다음 개선 방향을 함께 기록합니다.
+
+| # | 프로젝트 | 주요 기법 | 상태 |
+|---:|---|---|:---:|
+| 01 | [기업 리뷰·채용공고 분석](./job-review-analysis) | 텍스트마이닝 · 사전 기반 점수화 · 통합 지표 | 완료 |
+| 02 | [서울시 생애주기별 사회적 고립 위험지역 분석](./seoul-isolation-risk-analysis) | 공공데이터 정합화 · 복합위험지수 · 공간 시각화 | 완료 |
+| 03 | [이커머스 랭킹 상품 수집·분석](./ecommerce-ranking-analysis) | Selenium · BeautifulSoup · 스키마 정규화 | 완료 |
+| 04 | [Olist 이커머스 주문·리뷰 분석](./olist-ecommerce-analysis) | SQLite · CTE · Window Function · KPI | 완료 |
+| 05 | [공급망 배송 지연 리스크 스코어링](./supply-chain-delay-risk-scoring) | XGBoost · 누수 방지 · 위험점수 · Streamlit | 완료 |
+| 06 | [한국어 AI 에이전트 응답 평가](./ai-agent-response-evaluation) | 평가 기준 설계 · 오류 유형 라벨링 | 완료 |
+| 07 | [포카리스웨트 소비자 반응 분석](./pocari-consumer-reaction-analysis) | 웹 수집 · 사전 기반 다중 라벨링 | 완료 |
+| 08 | [캘리포니아 주택가격 예측](./california-housing-price-prediction) | 회귀모형 비교 · CatBoost · SHAP | 완료 |
+| 09 | [다이아몬드 가격 결정요인 분석](./diamonds-price-analysis) | 선형회귀 · 전처리 비교 · 가정 진단 | 완료 |
+| 10 | [Mall Customers 고객 세분화](./mall-customers-segmentation) | K-means · 실루엣 · 경계 사례 진단 | 완료 |
+| 11 | [의료보험 청구비용 결정요인 분석](./insurance-cost-analysis) | 선형회귀 · 로그변환 · HC3 진단 | 완료 |
+| 12 | [보스턴 주택가격 결정요인 분석](./boston-housing-analysis) | 선형회귀 · 변수 선택 · 잔차 진단 | 완료 |
+| 13 | [사과 품질 분류](./apple-quality-classification) | 로지스틱 회귀 · 비선형항 · 임계값 분석 | 완료 |
+| 14 | [타이타닉 생존 예측](./titanic-survival-analysis) | 분류모형 비교 · 튜닝 · SHAP | 완료 |
+
+## 📮 Contact
+
+- **Email:** [bolly0809@gmail.com](mailto:bolly0809@gmail.com)
+- **GitHub:** [github.com/bolly0809-coder](https://github.com/bolly0809-coder)
+- **Notion:** [Portfolio](https://app.notion.com/p/36eb1b26b8cc81e69a2ed576a6333f6d)
+
+<p align="center">
+  Education Data · E-commerce · Service Analytics · Statistical Modeling · Machine Learning · Data Visualization
+</p>
