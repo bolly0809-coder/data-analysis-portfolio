@@ -123,24 +123,22 @@
 
 ## 📂 포트폴리오 구성
 
-각 프로젝트는 **문제 정의 → 품질 점검 → EDA → 전처리·모델링 → 평가·진단 → 결과 해석**의 흐름으로 구성했습니다. 성능 수치만 제시하지 않고 사용한 기준, 오류 가능성, 해석 범위와 다음 개선 방향을 함께 기록합니다.
+각 프로젝트는 **문제 정의 → 품질 점검 → EDA → 전처리·모델링 → 평가·진단 → 결과 해석**의 흐름으로 구성했습니다. 
+성능 수치만 제시하지 않고 사용한 기준, 오류 가능성, 해석 범위와 다음 개선 방향을 함께 기록합니다.
 
 | # | 프로젝트 | 주요 기법 | 상태 |
 |---:|---|---|:---:|
-| 01 | [기업 리뷰·채용공고 분석](./job-review-analysis) | 텍스트마이닝 · 사전 기반 점수화 · 통합 지표 | 완료 |
+| 01 | [기업 리뷰·채용공고 분석](./job-review-analysis) | 텍스트마이닝 · 사전 기반 점수화 · 통합 지표 | 보완 예정 |
 | 02 | [서울시 생애주기별 사회적 고립 위험지역 분석](./seoul-isolation-risk-analysis) | 공공데이터 정합화 · 복합위험지수 · 공간 시각화 | 완료 |
 | 03 | [이커머스 랭킹 상품 수집·분석](./ecommerce-ranking-analysis) | Selenium · BeautifulSoup · 스키마 정규화 | 완료 |
 | 04 | [Olist 이커머스 주문·리뷰 분석](./olist-ecommerce-analysis) | SQLite · CTE · Window Function · KPI | 완료 |
-| 05 | [공급망 배송 지연 리스크 스코어링](./supply-chain-delay-risk-scoring) | XGBoost · 누수 방지 · 위험점수 · Streamlit | 완료 |
-| 06 | [한국어 AI 에이전트 응답 평가](./ai-agent-response-evaluation) | 평가 기준 설계 · 오류 유형 라벨링 | 완료 |
-| 07 | [포카리스웨트 소비자 반응 분석](./pocari-consumer-reaction-analysis) | 웹 수집 · 사전 기반 다중 라벨링 | 완료 |
-| 08 | [캘리포니아 주택가격 예측](./california-housing-price-prediction) | 회귀모형 비교 · CatBoost · SHAP | 완료 |
-| 09 | [다이아몬드 가격 결정요인 분석](./diamonds-price-analysis) | 선형회귀 · 전처리 비교 · 가정 진단 | 완료 |
-| 10 | [Mall Customers 고객 세분화](./mall-customers-segmentation) | K-means · 실루엣 · 경계 사례 진단 | 완료 |
-| 11 | [의료보험 청구비용 결정요인 분석](./insurance-cost-analysis) | 선형회귀 · 로그변환 · HC3 진단 | 완료 |
-| 12 | [보스턴 주택가격 결정요인 분석](./boston-housing-analysis) | 선형회귀 · 변수 선택 · 잔차 진단 | 완료 |
-| 13 | [사과 품질 분류](./apple-quality-classification) | 로지스틱 회귀 · 비선형항 · 임계값 분석 | 완료 |
-| 14 | [타이타닉 생존 예측](./titanic-survival-analysis) | 분류모형 비교 · 튜닝 · SHAP | 완료 |
+| 05 | [캘리포니아 주택가격 예측](./california-housing-price-prediction) | 회귀모형 비교 · CatBoost · SHAP | 완료 |
+| 06 | [다이아몬드 가격 결정요인 분석](./diamonds-price-analysis) | 선형회귀 · 전처리 비교 · 가정 진단 | 완료 |
+| 07 | [Mall Customers 고객 세분화](./mall-customers-segmentation) | K-means · 실루엣 · 경계 사례 진단 | 완료 |
+| 08 | [의료보험 청구비용 결정요인 분석](./insurance-cost-analysis) | 선형회귀 · 로그변환 · HC3 진단 | 완료 |
+| 09 | [보스턴 주택가격 결정요인 분석](./boston-housing-analysis) | 선형회귀 · 변수 선택 · 잔차 진단 | 완료 |
+| 10 | [사과 품질 분류](./apple-quality-classification) | 로지스틱 회귀 · 비선형항 · 임계값 분석 | 완료 |
+| 11 | [타이타닉 생존 예측](./titanic-survival-analysis) | 분류모형 비교 · 튜닝 · SHAP | 완료 |
 
 ## 📮 Contact
 
