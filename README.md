@@ -128,10 +128,10 @@
 
 | # | 프로젝트 | 주요 기법 | 상태 |
 |---:|---|---|:---:|
-| 01 | [기업 리뷰·채용공고 분석](./job-review-analysis) | 텍스트마이닝 · 사전 기반 점수화 · 통합 지표 | 보완 예정 |
-| 02 | [서울시 생애주기별 사회적 고립 위험지역 분석](./seoul-isolation-risk-analysis) | 공공데이터 정합화 · 복합위험지수 · 공간 시각화 | 완료 |
-| 03 | [이커머스 랭킹 상품 수집·분석](./ecommerce-ranking-analysis) | Selenium · BeautifulSoup · 스키마 정규화 | 완료 |
-| 04 | [Olist 이커머스 주문·리뷰 분석](./olist-ecommerce-analysis) | SQLite · CTE · Window Function · KPI | 완료 |
+| 01 | [기업 리뷰·채용공고 분석](./job-review-analysis) | 텍스트마이닝 · 사전 기반 점수화 · 통합 지표 | 보완 예정 (4순위) |
+| 02 | [서울시 생애주기별 사회적 고립 위험지역 분석](./seoul-isolation-risk-analysis) | 공공데이터 정합화 · 복합위험지수 · 공간 시각화 | 보완 예정 (3순위) |
+| 03 | [이커머스 랭킹 상품 수집·분석](./ecommerce-ranking-analysis) | Selenium · BeautifulSoup · 스키마 정규화 | 보완 예정 (2순위) |
+| 04 | [Olist 이커머스 주문·리뷰 분석](./olist-ecommerce-analysis) | SQLite · CTE · Window Function · KPI | 보완 예정 (1순위) |
 | 05 | [캘리포니아 주택가격 예측](./california-housing-price-prediction) | 회귀모형 비교 · CatBoost · SHAP | 완료 |
 | 06 | [다이아몬드 가격 결정요인 분석](./diamonds-price-analysis) | 선형회귀 · 전처리 비교 · 가정 진단 | 완료 |
 | 07 | [Mall Customers 고객 세분화](./mall-customers-segmentation) | K-means · 실루엣 · 경계 사례 진단 | 완료 |
