@@ -42,7 +42,7 @@
 |---:|---|---|---|
 | 1 | **Data Preparation & SQL** | Olist 9개 테이블 SQL 분석 | JOIN·CTE·Window Function, 분석 단위별 base table 설계, 중복 집계 방지 |
 | 2 | **Statistical Modeling & Machine Learning** | 회귀·분류·군집 프로젝트 | 학습·검증 분리, 데이터 누수 점검, 모델 비교, 오차 및 일반화 성능 진단 |
-| 3 | **Metric Design & Decision Support** | 사회적 고립 위험지수·공급망 리스크 스코어 | 다출처 지표 정합화, 가중 결합, 점수 환산, 우선순위 기준 설계 |
+| 3 | **Metric Design & Decision Support** | 사회적 고립 위험지수 | 다출처 지표 정합화, 가중 결합, 점수 환산, 우선순위 기준 설계 |
 | 4 | **Text Data & Collection** | 기업 리뷰·이커머스 랭킹·소비자 반응 분석 | Selenium·BeautifulSoup 수집, 텍스트 정제, 사전 기반 분류·감성 신호 점수화 |
 | 5 | **Communication & Domain Understanding** | 콘텐츠 품질관리·국어 과외·민원 응대 | 분석 기준 문서화, 사용자 관점 설명, 결과를 보고서·대시보드·운영안으로 전달 |
 
