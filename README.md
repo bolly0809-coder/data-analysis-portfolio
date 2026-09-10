@@ -141,7 +141,6 @@
 ## 📮 Contact
 
 - **Email:** [bolly0809@gmail.com](mailto:bolly0809@gmail.com)
-- **GitHub:** [github.com/bolly0809-coder](https://github.com/bolly0809-coder)
 
 <p align="center">
   Education Data · E-commerce · Service Analytics · Statistical Modeling · Machine Learning · Data Visualization
