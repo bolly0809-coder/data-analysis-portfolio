@@ -142,6 +142,6 @@
 
 - **Email:** [bolly0809@gmail.com](mailto:bolly0809@gmail.com)
 
-<p align="center">
-  Education Data · E-commerce · Service Analytics · Statistical Modeling · Machine Learning · Data Visualization
-</p>
+
+
+
