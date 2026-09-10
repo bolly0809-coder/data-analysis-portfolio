@@ -142,7 +142,6 @@
 
 - **Email:** [bolly0809@gmail.com](mailto:bolly0809@gmail.com)
 - **GitHub:** [github.com/bolly0809-coder](https://github.com/bolly0809-coder)
-- **Notion:** [Portfolio](https://app.notion.com/p/36eb1b26b8cc81e69a2ed576a6333f6d)
 
 <p align="center">
   Education Data · E-commerce · Service Analytics · Statistical Modeling · Machine Learning · Data Visualization
