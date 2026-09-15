@@ -9,7 +9,7 @@
 <h3 align="center">Data Analyst</h3>
 
 <p align="center">
-  SQL · Python · Statistical Modeling · Machine Learning · Data Visualization
+  Data Preparation · Python · Statistical Modeling · Machine Learning · Data Visualization
 </p>
 
 <p align="center">
@@ -35,11 +35,11 @@
 
 ## 🎯 핵심 역량 Core Competencies
 
-프로젝트의 분석 과정과 결과를 기준으로 정리했습니다.
+공개 프로젝트와 실무 경험을 기준으로 정리했습니다.
 
 | # | 영역 | 경험 근거 | 핵심 역량 |
 |---:|---|---|---|
-| 1 | **Data Preparation & SQL** | Olist 9개 테이블 SQL 분석 | JOIN·CTE·Window Function, 분석 단위별 base table 설계, 중복 집계 방지 |
+| 1 | **Data Preparation & Validation** | 화장품 행동 로그 874만 건 고객 단위 재구성 | 대용량 분할 로딩, 중복·무효값 처리, 관측 단위 설계, 고객 단위 분석 테이블 구축 |
 | 2 | **Statistical Modeling & Machine Learning** | 장바구니 전환·회귀·분류·군집 프로젝트 | 관측 단위 설계, 학습·검증 분리, 데이터 누수 점검, 모델 비교와 일반화 성능 진단 |
 | 3 | **Metric Design & Decision Support** | 사회적 고립 위험지수 | 다출처 지표 정합화, 가중 결합, 점수 환산, 우선순위 기준 설계 |
 | 4 | **Text Data & Collection** | 기업 리뷰 21,197건 분석·점수화 | Selenium·BeautifulSoup 수집, 한국어 텍스트 정제, 사전 기반 영역 분류·감성 신호 점수화 |
@@ -55,7 +55,6 @@
 ## 🧪 Methodological Keywords
 
 <p>
-  <img src="https://img.shields.io/badge/SQL-Relational%20Analysis-336791?style=flat-square&logo=sqlite&logoColor=white" alt="SQL">
   <img src="https://img.shields.io/badge/Python-Data%20Analysis-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
   <img src="https://img.shields.io/badge/Machine%20Learning-Model%20Evaluation-F7931E?style=flat-square" alt="Machine Learning">
   <img src="https://img.shields.io/badge/Statistics-Hypothesis%20Testing-4C78A8?style=flat-square" alt="Statistics">
@@ -65,12 +64,11 @@
 
 | # | 키워드 | 세부 |
 |---:|---|---|
-| 01 | SQL & Relational Data Modeling | 다중 테이블 결합 · CTE · Window Function · 분석 단위별 base table |
-| 02 | Data Quality & Preprocessing | 결측·중복·이상치 점검 · 스키마 정합화 · 검증 절차 |
-| 03 | Statistical Modeling | 선형·로지스틱 회귀 · 가설검정 · 잔차 및 가정 진단 |
-| 04 | Machine Learning Evaluation | 분류·회귀·군집 · 시간순 검증 · 임계값과 오차 해석 |
-| 05 | Metric & Score Design | KPI · 복합지수 · 위험점수 · 우선순위 산출식 |
-| 06 | Text Mining & Data Collection | 웹 수집 자동화 · 텍스트 정제 · 사전 기반 분류·감성분석 |
+| 01 | Data Quality & Preprocessing | 결측·중복·이상치 점검 · 스키마 정합화 · 검증 절차 |
+| 02 | Statistical Modeling | 선형·로지스틱 회귀 · 가설검정 · 잔차 및 가정 진단 |
+| 03 | Machine Learning Evaluation | 분류·회귀·군집 · 학습·검증 분리 · 교차검증 · 임계값과 오차 해석 |
+| 04 | Metric & Score Design | KPI · 복합지수 · 위험점수 · 우선순위 산출식 |
+| 05 | Text Mining & Data Collection | 웹 수집 자동화 · 텍스트 정제 · 사전 기반 분류·감성분석 |
 
 ## 🚀 Growth Focus
 
@@ -79,13 +77,6 @@
 3. 반복되는 수집·검증·리포팅 업무를 재현 가능한 분석 파이프라인으로 자동화
 
 ## 🛠️ Technology Stack
-
-### Database & Query
-
-<p>
-  <img src="https://img.shields.io/badge/SQL-336791?style=flat-square&logo=postgresql&logoColor=white" alt="SQL">
-  <img src="https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white" alt="SQLite">
-</p>
 
 ### Analysis & Modeling
 
@@ -98,7 +89,6 @@
   <img src="https://img.shields.io/badge/XGBoost-EB5B28?style=flat-square" alt="XGBoost">
   <img src="https://img.shields.io/badge/LightGBM-02569B?style=flat-square" alt="LightGBM">
   <img src="https://img.shields.io/badge/statsmodels-4051B5?style=flat-square" alt="statsmodels">
-  <img src="https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white" alt="R">
 </p>
 
 ### Visualization & Delivery
@@ -106,9 +96,7 @@
 <p>
   <img src="https://img.shields.io/badge/Matplotlib-11557C?style=flat-square" alt="Matplotlib">
   <img src="https://img.shields.io/badge/Seaborn-4C72B0?style=flat-square" alt="Seaborn">
-  <img src="https://img.shields.io/badge/Power%20BI-F2C811?style=flat-square&logo=powerbi&logoColor=black" alt="Power BI">
   <img src="https://img.shields.io/badge/Excel-217346?style=flat-square&logo=microsoftexcel&logoColor=white" alt="Excel">
-  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white" alt="Streamlit">
   <img src="https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white" alt="Jupyter">
 </p>
 
