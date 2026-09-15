@@ -40,7 +40,7 @@
 | # | 영역 | 경험 근거 | 핵심 역량 |
 |---:|---|---|---|
 | 1 | **Data Preparation & SQL** | Olist 9개 테이블 SQL 분석 | JOIN·CTE·Window Function, 분석 단위별 base table 설계, 중복 집계 방지 |
-| 2 | **Statistical Modeling & Machine Learning** | 회귀·분류·군집 프로젝트 | 학습·검증 분리, 데이터 누수 점검, 모델 비교, 오차 및 일반화 성능 진단 |
+| 2 | **Statistical Modeling & Machine Learning** | 장바구니 전환·회귀·분류·군집 프로젝트 | 관측 단위 설계, 학습·검증 분리, 데이터 누수 점검, 모델 비교와 일반화 성능 진단 |
 | 3 | **Metric Design & Decision Support** | 사회적 고립 위험지수 | 다출처 지표 정합화, 가중 결합, 점수 환산, 우선순위 기준 설계 |
 | 4 | **Text Data & Collection** | 기업 리뷰 21,197건 분석·점수화 | Selenium·BeautifulSoup 수집, 한국어 텍스트 정제, 사전 기반 영역 분류·감성 신호 점수화 |
 | 5 | **Communication & Domain Understanding** | 콘텐츠 품질관리·국어 과외·민원 응대 | 분석 기준 문서화, 사용자 관점 설명, 결과를 보고서·대시보드·운영안으로 전달 |
@@ -127,15 +127,16 @@
 
 | # | 프로젝트 | 주요 기법 | 상태 |
 |---:|---|---|:---:|
-| 01 | [기업 리뷰·채용공고 지원 우선순위 분석](./job-review-analysis) | 리뷰 21,197건 · 7개 영역 점수화 · 공고 515건 결합 | 완료 |
-| 02 | [서울시 생애주기별 사회적 고립 위험지역 분석](./seoul-isolation-risk-analysis) | 행정동 426개 · 완전 사례 378개 · 중첩위험 TOP9 | 완료 |
-| 03 | [캘리포니아 주택가격 예측](./california-housing-price-prediction) | 회귀모형 비교 · CatBoost · SHAP | 완료 |
-| 04 | [다이아몬드 가격 결정요인 분석](./diamonds-price-analysis) | 선형회귀 · 전처리 비교 · 가정 진단 | 완료 |
-| 05 | [Mall Customers 고객 세분화](./mall-customers-segmentation) | K-means · 실루엣 · 경계 사례 진단 | 완료 |
-| 06 | [의료보험 청구비용 결정요인 분석](./insurance-cost-analysis) | 선형회귀 · 로그변환 · HC3 진단 | 완료 |
-| 07 | [보스턴 주택가격 결정요인 분석](./boston-housing-analysis) | 선형회귀 · 변수 선택 · 잔차 진단 | 완료 |
-| 08 | [사과 품질 분류](./apple-quality-classification) | 로지스틱 회귀 · 비선형항 · 임계값 분석 | 완료 |
-| 09 | [타이타닉 생존 예측](./titanic-survival-analysis) | 분류모형 비교 · 튜닝 · SHAP | 완료 |
+| 01 | [화장품 이커머스 장바구니 7일 구매 전환 분석](./cosmetics-cart-conversion-analysis) | 행동 로그 874만 건 · 고객 108,458명 · 누적 리프트 1.46배 | 완료 |
+| 02 | [기업 리뷰·채용공고 지원 우선순위 분석](./job-review-analysis) | 리뷰 21,197건 · 7개 영역 점수화 · 공고 515건 결합 | 완료 |
+| 03 | [서울시 생애주기별 사회적 고립 위험지역 분석](./seoul-isolation-risk-analysis) | 행정동 426개 · 완전 사례 378개 · 중첩위험 TOP9 | 완료 |
+| 04 | [캘리포니아 주택가격 예측](./california-housing-price-prediction) | 회귀모형 비교 · CatBoost · SHAP | 완료 |
+| 05 | [다이아몬드 가격 결정요인 분석](./diamonds-price-analysis) | 선형회귀 · 전처리 비교 · 가정 진단 | 완료 |
+| 06 | [Mall Customers 고객 세분화](./mall-customers-segmentation) | K-means · 실루엣 · 경계 사례 진단 | 완료 |
+| 07 | [의료보험 청구비용 결정요인 분석](./insurance-cost-analysis) | 선형회귀 · 로그변환 · HC3 진단 | 완료 |
+| 08 | [보스턴 주택가격 결정요인 분석](./boston-housing-analysis) | 선형회귀 · 변수 선택 · 잔차 진단 | 완료 |
+| 09 | [사과 품질 분류](./apple-quality-classification) | 로지스틱 회귀 · 비선형항 · 임계값 분석 | 완료 |
+| 10 | [타이타닉 생존 예측](./titanic-survival-analysis) | 분류모형 비교 · 튜닝 · SHAP | 완료 |
 
 ## 📮 Contact
 
