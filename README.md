@@ -17,7 +17,6 @@
   <img src="https://img.shields.io/badge/Education-Dongguk%20University-8B0029?style=flat-square" alt="Dongguk University">
   <img src="https://img.shields.io/badge/Training-ITWILL%20Data%20Analysis-34568B?style=flat-square" alt="ITWILL Data Analysis">
   <a href="mailto:bolly0809@gmail.com"><img src="https://img.shields.io/badge/Email-bolly0809%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email"></a>
-  <a href="https://app.notion.com/p/36eb1b26b8cc81e69a2ed576a6333f6d"><img src="https://img.shields.io/badge/Portfolio-Notion-000000?style=flat-square&logo=notion&logoColor=white" alt="Notion"></a>
 </p>
 
 여러 테이블과 출처의 데이터를 분석 가능한 구조로 정리하고, 검증 가능한 지표·예측·시각화로 연결해 사용자의 판단을 돕는 **신입 데이터 분석가**입니다. 분석 단위와 시점을 먼저 정의하고, 중복 집계와 데이터 누수를 점검한 뒤 결과의 활용 범위까지 설명하는 것을 중요하게 생각합니다.
@@ -129,7 +128,7 @@
 | # | 프로젝트 | 주요 기법 | 상태 |
 |---:|---|---|:---:|
 | 01 | [기업 리뷰·채용공고 지원 우선순위 분석](./job-review-analysis) | 리뷰 21,197건 · 7개 영역 점수화 · 공고 515건 결합 | 완료 |
-| 02 | [서울시 생애주기별 사회적 고립 위험지역 분석](./seoul-isolation-risk-analysis) | 공공데이터 정합화 · 복합위험지수 · 공간 시각화 | 완료 |
+| 02 | [서울시 생애주기별 사회적 고립 위험지역 분석](./seoul-isolation-risk-analysis) | 행정동 426개 · 완전 사례 378개 · 중첩위험 TOP9 | 완료 |
 | 03 | [캘리포니아 주택가격 예측](./california-housing-price-prediction) | 회귀모형 비교 · CatBoost · SHAP | 완료 |
 | 04 | [다이아몬드 가격 결정요인 분석](./diamonds-price-analysis) | 선형회귀 · 전처리 비교 · 가정 진단 | 완료 |
 | 05 | [Mall Customers 고객 세분화](./mall-customers-segmentation) | K-means · 실루엣 · 경계 사례 진단 | 완료 |
