@@ -112,7 +112,6 @@ final_score = posting_final_score × 0.40 + review_final_score × 0.60
 
 - `README.md`: 프로젝트 요약, 점수 구조, 결과와 한계
 - `job-review-scoring.ipynb`: 공개 가능한 코드 구조와 검증된 집계 수치를 담은 재구성 노트북
-- 상세 포트폴리오: [Notion 프로젝트 페이지](https://www.notion.so/36fb1b26b8cc816faebefb7c73f2cbd6)
 
 잡플래닛 리뷰 원문, 기업별 상세 점수, 사전 엑셀, 채용공고 URL, SQLite 데이터베이스, 크롤링 세션, 팀 내부 제출본은 저장소에 포함하지 않는다. 데이터 라이선스와 리뷰 작성자 보호를 위한 조치다.
 
